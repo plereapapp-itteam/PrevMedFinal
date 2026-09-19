@@ -213,85 +213,6 @@ footer.plate-foot span:first-child{ color:var(--region, #A79A79); font-weight:60
 .region-neutral{ --region:#3E4F52; --region-bg:#EDEAE0; --region-bg2:#DAD2BE; }
 .region-quiz   { --region:#2A5C77; --region-bg:#E4EDF0; --region-bg2:#C3D9E1; }
 
-/* ---------- QUIZ MODE ---------- */
-.pq-intro{font-size:14.5px; color:var(--ink-soft); line-height:1.6; margin:0 0 6px;}
-.pq-card{ background:var(--panel); border:1px solid var(--line); border-radius:3px; padding:24px; margin-bottom:18px; }
-.pq-region-grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(210px,1fr)); gap:8px; }
-.pq-chip{
-  display:flex; align-items:center; gap:8px; padding:9px 12px; border:1px solid var(--line); border-radius:3px;
-  cursor:pointer; font-size:13.5px; background:var(--paper); user-select:none; transition:background .12s, border-color .12s;
-}
-.pq-chip.on{ background:var(--gold-bg); border-color:var(--gold); }
-.pq-chip .pq-box{
-  width:14px; height:14px; border:1.5px solid var(--ink-soft); border-radius:2px; flex-shrink:0;
-  display:flex; align-items:center; justify-content:center; font-size:10px; color:var(--gold);
-}
-.pq-chip.on .pq-box{ border-color:var(--gold); }
-.pq-chip .pq-num{ font-family:var(--serif); color:#8CA6A1; font-size:13px; }
-.pq-chip.on .pq-num{ color:var(--gold); }
-.pq-region-actions{ margin-top:12px; display:flex; gap:14px; font-size:12.5px; }
-.pq-link-btn{ background:none; border:none; color:var(--down); text-decoration:underline; cursor:pointer; padding:0; font-size:12.5px; font-family:var(--sans); }
-.pq-count-row{ display:flex; gap:8px; flex-wrap:wrap; }
-.pq-count-btn{ padding:9px 16px; border:1px solid var(--line); border-radius:3px; background:var(--paper); cursor:pointer; font-size:13.5px; color:var(--ink); }
-.pq-count-btn.on{ background:var(--ink); color:var(--paper); border-color:var(--ink); }
-.pq-start-btn{
-  margin-top:22px; width:100%; padding:14px; background:var(--ink); color:var(--paper); border:none; border-radius:3px;
-  font-size:15px; font-family:var(--serif); font-weight:600; letter-spacing:.01em; cursor:pointer;
-}
-.pq-start-btn:disabled{ background:#B7AD91; cursor:not-allowed; }
-.pq-warn{ color:var(--up); font-size:12.5px; margin-top:8px; }
-.pq-top{ display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; font-size:12.5px; color:var(--ink-soft); }
-.pq-progress-track{ height:6px; background:var(--line); border-radius:3px; overflow:hidden; margin-bottom:22px; }
-.pq-progress-fill{ height:100%; background:var(--gold); transition:width .25s ease; }
-.pq-tag-row{ display:flex; align-items:center; gap:8px; margin-bottom:10px; }
-.pq-region-tag{ font-size:11px; letter-spacing:.04em; color:var(--ink-soft); background:var(--gold-bg); border:1px solid var(--gold); padding:3px 9px; border-radius:12px; }
-.pq-text{ font-family:var(--serif); font-size:20px; font-weight:600; line-height:1.4; margin:0 0 22px; }
-.pq-options{ display:flex; flex-direction:column; gap:10px; }
-.pq-option{
-  text-align:left; padding:13px 16px; border:1px solid var(--line); border-radius:3px; background:var(--panel);
-  font-size:14.5px; font-family:var(--sans); color:var(--ink); cursor:pointer; display:flex; gap:10px; align-items:flex-start; line-height:1.5; width:100%;
-}
-.pq-option:hover:not(.pq-locked){ background:var(--paper); }
-.pq-option .pq-letter{ font-family:var(--serif); font-weight:600; color:var(--down); flex-shrink:0; width:16px; }
-.pq-option.pq-correct{ background:var(--gold-bg); border-color:var(--gold); }
-.pq-option.pq-correct .pq-letter{ color:var(--gold); }
-.pq-option.pq-incorrect{ background:var(--P-bg); border-color:var(--P); }
-.pq-option.pq-incorrect .pq-letter{ color:var(--P); }
-.pq-option.pq-locked{ cursor:default; }
-.pq-option.pq-dim{ opacity:.55; }
-.pq-explain{ margin-top:18px; padding:14px 16px; border-left:3px solid var(--gold); background:var(--gold-bg); font-size:13.5px; line-height:1.6; border-radius:2px; }
-.pq-explain.pq-wrong{ border-left-color:var(--P); background:var(--P-bg); }
-.pq-explain .pq-verdict{ font-family:var(--serif); font-weight:600; display:block; margin-bottom:4px; }
-.pq-next-btn{
-  margin-top:20px; width:100%; padding:13px; background:var(--ink); color:var(--paper); border:none; border-radius:3px;
-  font-size:14.5px; font-family:var(--serif); font-weight:600; cursor:pointer;
-}
-.pq-score-hero{ text-align:center; padding:8px 0 20px; }
-.pq-score-num{ font-family:var(--serif); font-size:56px; font-weight:600; line-height:1; color:var(--ink); }
-.pq-score-sub{ font-size:13.5px; color:var(--ink-soft); margin-top:6px; }
-.pq-cat-breakdown{ display:flex; flex-direction:column; gap:10px; }
-.pq-cat-row{ display:flex; align-items:center; gap:10px; font-size:13px; }
-.pq-cat-row .pq-cat-name{ width:190px; flex-shrink:0; color:var(--ink-soft); }
-.pq-cat-bar-track{ flex:1; height:8px; background:var(--line); border-radius:4px; overflow:hidden; }
-.pq-cat-bar-fill{ height:100%; background:var(--down); }
-.pq-cat-row .pq-cat-score{ width:44px; text-align:right; color:var(--ink-soft); flex-shrink:0; }
-.pq-miss-item{ padding:14px 0; border-bottom:1px dashed var(--line); }
-.pq-miss-item:last-child{ border-bottom:none; }
-.pq-miss-q{ font-weight:600; font-size:14px; margin-bottom:6px; }
-.pq-miss-you{ color:var(--P); font-size:13px; margin-bottom:3px; }
-.pq-miss-correct{ color:var(--gold); font-size:13px; margin-bottom:6px; }
-.pq-miss-exp{ font-size:13px; color:var(--ink-soft); line-height:1.55; }
-.pq-result-actions{ display:flex; gap:10px; margin-top:6px; flex-wrap:wrap; }
-.pq-result-actions button{ flex:1; min-width:160px; padding:12px; border-radius:3px; font-size:13.5px; font-family:var(--sans); cursor:pointer; }
-.pq-btn-primary{ background:var(--ink); color:var(--paper); border:none; }
-.pq-btn-secondary{ background:var(--paper); color:var(--ink); border:1px solid var(--line); }
-.pq-hidden{ display:none !important; }
-@media (max-width:520px){
-  .pq-score-num{ font-size:44px; }
-  .pq-cat-row .pq-cat-name{ width:130px; font-size:12px; }
-}
-
-
 .region-hcp        { --region:#1F6FA0; --region-bg:#E2EFF6; --region-bg2:#BEDDEC; }
 .region-phcs       { --region:#4C7A1F; --region-bg:#EAF3DE; --region-bg2:#CFE0B6; }
 .region-admin      { --region:#8A5A1E; --region-bg:#F6EBDA; --region-bg2:#EACFA5; }
@@ -302,6 +223,155 @@ ol.facts-ol{ list-style:decimal; padding-left:22px; margin:0 0 4px; }
 ol.facts-ol li{ padding:6px 2px; font-size:14px; line-height:1.6; }
 .plate a{ color:var(--region, var(--gold)); text-decoration:underline; }
 
+
+  /* ============================================================
+     QUIZ MODE (scoped: qz-)
+     ============================================================ */
+  .region-quiz { --region:#2A5C77; --region-bg:#E4EDF0; --region-bg2:#C3D9E1; }
+  .qz-intro{font-size:14.5px; color:var(--ink-soft); line-height:1.6; margin:0 0 6px;}
+  .qz-card{ background:var(--panel); border:1px solid var(--line); border-radius:3px; padding:22px 24px; margin-bottom:18px; }
+  .qz-card h3.block-title{ margin-bottom:12px; }
+  .qz-hidden{ display:none !important; }
+
+  /* topic tabs */
+  .qz-tabs{ display:flex; flex-wrap:wrap; gap:6px; margin:18px 0 18px; padding-bottom:12px; border-bottom:1px solid var(--line); }
+  .qz-tab{
+    display:inline-flex; align-items:center; gap:6px; padding:7px 12px; border:1px solid var(--line); border-radius:3px;
+    background:var(--paper); color:var(--ink); font-size:13px; font-family:var(--sans); cursor:pointer; line-height:1.2;
+  }
+  .qz-tab .qz-tab-num{ font-family:var(--serif); font-weight:600; color:var(--region, var(--ink-soft)); font-size:12.5px; }
+  .qz-tab .qz-tab-score{ font-size:11.5px; color:var(--ink-soft); }
+  .qz-tab:hover{ border-color:var(--region, var(--ink-soft)); }
+  .qz-tab.on{ background:var(--region, var(--ink)); border-color:var(--region, var(--ink)); color:#fff; }
+  .qz-tab.on .qz-tab-num, .qz-tab.on .qz-tab-score{ color:#fff; }
+
+  .qz-panel-head{ display:flex; align-items:flex-start; gap:14px; margin-bottom:14px; }
+  .qz-panel-head .qz-roman{ font-family:var(--serif); font-size:34px; font-weight:600; line-height:1; color:var(--region, var(--ink)); min-width:44px; }
+  .qz-panel-head h3{ font-family:var(--serif); font-size:22px; margin:0 0 4px; color:var(--region, var(--ink)); }
+  .qz-scope{ font-size:12.5px; color:var(--ink-soft); line-height:1.55; }
+
+  /* chips */
+  .qz-grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(200px,1fr)); gap:8px; }
+  .qz-chip{
+    display:flex; align-items:center; gap:8px; padding:9px 12px; border:1px solid var(--line); border-radius:3px;
+    cursor:pointer; font-size:13.5px; background:var(--paper); user-select:none; transition:background .12s, border-color .12s;
+  }
+  .qz-chip.on{ background:var(--gold-bg); border-color:var(--gold); }
+  .qz-chip .qz-box{
+    width:14px; height:14px; border:1.5px solid var(--ink-soft); border-radius:2px; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center; font-size:10px; color:var(--gold);
+  }
+  .qz-chip.on .qz-box{ border-color:var(--gold); }
+  .qz-chip .qz-num{ font-family:var(--serif); color:#8CA6A1; font-size:13px; min-width:22px; }
+  .qz-chip.on .qz-num{ color:var(--gold); }
+  .qz-chip .qz-cnt{ margin-left:auto; font-size:11.5px; color:var(--ink-soft); }
+  .qz-actions{ margin-top:12px; display:flex; gap:14px; font-size:12.5px; }
+  .qz-link-btn{ background:none; border:none; color:var(--down); text-decoration:underline; cursor:pointer; padding:0; font-size:12.5px; font-family:var(--sans); }
+
+  /* blueprint table */
+  .qz-blueprint{ width:100%; border-collapse:collapse; font-size:13px; }
+  .qz-blueprint th, .qz-blueprint td{ border:1px solid var(--line); padding:7px 10px; text-align:center; }
+  .qz-blueprint th{ background:var(--region-bg, #EFE9D9); font-weight:600; }
+  .qz-blueprint td:first-child, .qz-blueprint th:first-child{ text-align:left; }
+
+  /* level cards inside a topic tab */
+  .qz-level-list{ display:flex; flex-direction:column; gap:8px; }
+  .qz-level-row{
+    display:flex; align-items:center; gap:12px; padding:11px 14px; border:1px solid var(--line); border-radius:3px;
+    background:var(--paper); cursor:pointer; user-select:none;
+  }
+  .qz-level-row.on{ background:var(--gold-bg); border-color:var(--gold); }
+  .qz-level-row .qz-box{ width:14px; height:14px; border:1.5px solid var(--ink-soft); border-radius:2px; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:10px; color:var(--gold); }
+  .qz-level-row.on .qz-box{ border-color:var(--gold); }
+  .qz-level-name{ font-weight:600; font-size:14px; min-width:120px; }
+  .qz-level-desc{ font-size:12.5px; color:var(--ink-soft); flex:1; }
+  .qz-level-count{ font-family:var(--serif); font-size:13px; color:var(--ink-soft); white-space:nowrap; }
+
+  .qz-lv-badge{ display:inline-block; font-size:10.5px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; padding:2px 7px; border-radius:10px; border:1px solid; }
+  .qz-lv-rem{ color:#2A5C77; border-color:#2A5C77; background:#E4EDF0; }
+  .qz-lv-und{ color:#1E8449; border-color:#1E8449; background:#E3F5EA; }
+  .qz-lv-app{ color:#A5761F; border-color:#A5761F; background:#F5ECD8; }
+  .qz-lv-ana{ color:#8E44AD; border-color:#8E44AD; background:#F1E5F6; }
+  .qz-lv-eva{ color:#A8342E; border-color:#A8342E; background:#F7E7E4; }
+  .qz-lv-cre{ color:#0E9488; border-color:#0E9488; background:#E0F5F2; }
+
+  .qz-count-row{ display:flex; gap:8px; flex-wrap:wrap; }
+  .qz-count-btn{ padding:9px 16px; border:1px solid var(--line); border-radius:3px; background:var(--paper); cursor:pointer; font-size:13.5px; color:var(--ink); font-family:var(--sans); }
+  .qz-count-btn.on{ background:var(--ink); color:var(--paper); border-color:var(--ink); }
+  .qz-start-btn{
+    margin-top:20px; width:100%; padding:14px; background:var(--ink); color:var(--paper); border:none; border-radius:3px;
+    font-size:15px; font-family:var(--serif); font-weight:600; letter-spacing:.01em; cursor:pointer;
+  }
+  .qz-start-btn.qz-alt{ background:var(--panel); color:var(--ink); border:1px solid var(--ink); margin-top:10px; }
+  .qz-start-btn:disabled{ background:#B7AD91; cursor:not-allowed; }
+  .qz-warn{ color:var(--P); font-size:12.5px; margin-top:8px; }
+  .qz-pool-note{ font-size:12.5px; color:var(--ink-soft); margin-top:12px; }
+
+  /* quiz screen */
+  .qz-top{ display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; font-size:12.5px; color:var(--ink-soft); gap:10px; }
+  .qz-quit{ background:none; border:none; color:var(--down); text-decoration:underline; cursor:pointer; font-size:12.5px; font-family:var(--sans); padding:0; }
+  .qz-progress-track{ height:6px; background:var(--line); border-radius:3px; overflow:hidden; margin-bottom:22px; }
+  .qz-progress-fill{ height:100%; background:var(--gold); transition:width .25s ease; }
+  .qz-tag-row{ display:flex; align-items:center; gap:8px; margin-bottom:12px; flex-wrap:wrap; }
+  .qz-region-tag{ font-size:11px; letter-spacing:.04em; color:#fff; background:var(--region, var(--ink-soft)); padding:3px 10px; border-radius:12px; }
+  .qz-text{ font-family:var(--serif); font-size:19px; font-weight:600; line-height:1.45; margin:0 0 22px; }
+  .qz-options{ display:flex; flex-direction:column; gap:10px; }
+  .qz-option{
+    text-align:left; padding:13px 16px; border:1px solid var(--line); border-radius:3px; background:var(--panel);
+    font-size:14.5px; font-family:var(--sans); color:var(--ink); cursor:pointer; display:flex; gap:10px; align-items:flex-start; line-height:1.5; width:100%;
+  }
+  .qz-option:hover:not(.qz-locked){ background:var(--paper); }
+  .qz-option .qz-letter{ font-family:var(--serif); font-weight:600; color:var(--down); flex-shrink:0; width:16px; }
+  .qz-option.qz-correct{ background:var(--gold-bg); border-color:var(--gold); }
+  .qz-option.qz-correct .qz-letter{ color:var(--gold); }
+  .qz-option.qz-incorrect{ background:var(--P-bg); border-color:var(--P); }
+  .qz-option.qz-incorrect .qz-letter{ color:var(--P); }
+  .qz-option.qz-locked{ cursor:default; }
+  .qz-option.qz-dim{ opacity:.55; }
+  .qz-explain{ margin-top:18px; padding:14px 16px; border-left:3px solid var(--gold); background:var(--gold-bg); font-size:13.5px; line-height:1.6; border-radius:2px; }
+  .qz-explain.qz-wrong{ border-left-color:var(--P); background:var(--P-bg); }
+  .qz-explain .qz-verdict{ font-family:var(--serif); font-weight:600; display:block; margin-bottom:4px; }
+  .qz-next-btn{
+    margin-top:20px; width:100%; padding:13px; background:var(--ink); color:var(--paper); border:none; border-radius:3px;
+    font-size:14.5px; font-family:var(--serif); font-weight:600; cursor:pointer;
+  }
+
+  /* results */
+  .qz-score-hero{ text-align:center; padding:8px 0 10px; }
+  .qz-score-num{ font-family:var(--serif); font-size:56px; font-weight:600; line-height:1; color:var(--ink); }
+  .qz-score-sub{ font-size:13.5px; color:var(--ink-soft); margin-top:6px; }
+  .qz-bars{ display:flex; flex-direction:column; gap:10px; }
+  .qz-bar-row{ display:flex; align-items:center; gap:10px; font-size:13px; }
+  .qz-bar-row .qz-bar-name{ width:190px; flex-shrink:0; color:var(--ink-soft); }
+  .qz-bar-track{ flex:1; height:8px; background:var(--line); border-radius:4px; overflow:hidden; }
+  .qz-bar-fill{ display:block; height:100%; background:var(--region, var(--down)); }
+  .qz-bar-row .qz-bar-score{ width:48px; text-align:right; color:var(--ink-soft); flex-shrink:0; }
+  .qz-lv-section{ margin-bottom:22px; }
+  .qz-lv-section:last-child{ margin-bottom:0; }
+  .qz-lv-head{ display:flex; align-items:center; gap:10px; padding-bottom:8px; margin-bottom:4px; border-bottom:1px solid var(--region-bg2, var(--line)); }
+  .qz-lv-head .qz-lv-score{ margin-left:auto; font-size:12.5px; color:var(--ink-soft); }
+  .qz-item{ padding:13px 0; border-bottom:1px dashed var(--line); }
+  .qz-item:last-child{ border-bottom:none; }
+  .qz-item-q{ font-weight:600; font-size:14px; margin-bottom:6px; line-height:1.5; }
+  .qz-item-q .qz-mark{ display:inline-block; width:18px; font-weight:700; }
+  .qz-item.ok .qz-mark{ color:var(--gold); }
+  .qz-item.bad .qz-mark{ color:var(--P); }
+  .qz-item-you{ color:var(--P); font-size:13px; margin-bottom:3px; }
+  .qz-item-correct{ color:var(--gold); font-size:13px; margin-bottom:6px; font-weight:600; }
+  .qz-item-exp{ font-size:13px; color:var(--ink-soft); line-height:1.55; }
+  .qz-result-actions{ display:flex; gap:10px; margin-top:6px; flex-wrap:wrap; }
+  .qz-result-actions button{ flex:1; min-width:160px; padding:12px; border-radius:3px; font-size:13.5px; font-family:var(--sans); cursor:pointer; }
+  .qz-btn-primary{ background:var(--ink); color:var(--paper); border:none; }
+  .qz-btn-secondary{ background:var(--paper); color:var(--ink); border:1px solid var(--line); }
+  .qz-filter-row{ display:flex; gap:14px; font-size:12.5px; margin:-4px 0 14px; color:var(--ink-soft); align-items:center; flex-wrap:wrap; }
+  .qz-filter-row label{ display:inline-flex; gap:6px; align-items:center; cursor:pointer; }
+  @media (max-width:620px){
+    .qz-score-num{ font-size:44px; }
+    .qz-bar-row .qz-bar-name{ width:120px; font-size:12px; }
+    .qz-level-desc{ display:none; }
+    .qz-card{ padding:18px 16px; }
+  }
+  @media print{ #quiz{ display:none !important; } }
 </style>
 </head>
 <body>
@@ -321,7 +391,7 @@ ol.facts-ol li{ padding:6px 2px; font-size:14px; line-height:1.6; }
 <button class="plate-btn" data-target="p4"><span class="num">🧮</span><span>IV &middot; Researcher</span></button>
 <button class="plate-btn" data-target="p5"><span class="num">📢</span><span>V &middot; Social Mobilizer / Leader</span></button>
 <button class="plate-btn" data-target="p6"><span class="num">🏁</span><span>✦ &middot; Final Sprint</span></button>
-<button class="plate-btn" data-target="quiz"><span class="num">📝</span><span>Quiz Mode</span></button>
+<button class="plate-btn" data-target="quiz"><span class="num">📝</span><span>? &middot; Quiz Mode</span></button>
     </nav>
     <div class="rail-legend">
       <div class="lg-title">TAG LEGEND</div>
@@ -384,6 +454,12 @@ ol.facts-ol li{ padding:6px 2px; font-size:14px; line-height:1.6; }
   <span class="toc-num">&#10022;</span>
   <span class="toc-icon" style="background:var(--gold-bg,#F5ECD8);">🏁</span>
   <span class="toc-text"><div class="toc-title">Final Sprint</div><div class="toc-desc">Last-minute board distractors and 30-second checks from all five roles</div></span>
+  <span class="toc-pct"></span>
+</li>
+<li>
+  <span class="toc-num">?</span>
+  <span class="toc-icon" style="background:var(--gold-bg,#F5ECD8);">📝</span>
+  <span class="toc-text"><div class="toc-title">Quiz Mode</div><div class="toc-desc">100 TOS-weighted MCQs by role and Bloom's level, with explanations</div></span>
   <span class="toc-pct"></span>
 </li>
   </ul>
@@ -818,81 +894,94 @@ ol.facts-ol li{ padding:6px 2px; font-size:14px; line-height:1.6; }
   <footer class="plate-foot"><span>Plate &#10022; &mdash; Final Sprint</span><span>Preventive Medicine Rapid Review &middot; PLE Board</span></footer>
 </article>
 
-<article class="plate region-quiz" id="quiz" style="display:none;">
-  <div class="plate-header">
-    <div class="plate-badge"><span class="icon-ring">📝</span><span class="roman">?</span></div>
-    <div class="titles">
-      <div class="eyebrow">Self-test &middot; draws from all five roles + Final Sprint</div>
-      <h2>Quiz Mode</h2>
-    </div>
-    <div class="tos">Board-style MCQs &middot; pick topics, pick length, review explanations as you go</div>
-  </div>
-
-  <section class="block" id="pq-setup-screen">
-    <p class="pq-intro">Choose which roles to draw questions from and how many you want. Each question is multiple choice with four options; you'll see the correct answer and a short explanation right after you answer.</p>
-
-    <div class="pq-card" style="margin-top:16px;">
-      <h3 class="block-title">Topics</h3>
-      <div class="pq-region-grid" id="pq-region-grid"></div>
-      <div class="pq-region-actions">
-        <button class="pq-link-btn" id="pq-select-all">Select all</button>
-        <button class="pq-link-btn" id="pq-select-none">Clear all</button>
+<!-- ================= QUIZ MODE ================= -->
+    <article class="plate region-quiz" id="quiz" style="display:none;">
+      <div class="plate-header">
+        <div class="plate-badge"><span class="icon-ring"><svg viewBox="0 0 32 32" width="30" height="30" class="ricon"><rect x="7" y="4" width="18" height="24" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M11 11l2 2 4-4M11 19l2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 12h3M19 20h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span class="roman">?</span></div>
+        <div class="titles">
+          <div class="eyebrow">Self-test · 100 items built to the PLE Preventive Medicine &amp; Public Health TOS</div>
+          <h2>📝 Quiz Mode</h2>
+        </div>
+        <div class="tos">5 roles weighted 10–30% · Bloom's totals: 12 Remember · 18 Understand · 27 Apply · 23 Analyze · 15 Evaluate · 5 Create</div>
       </div>
-    </div>
 
-    <div class="pq-card">
-      <h3 class="block-title">Quiz length</h3>
-      <div class="pq-count-row" id="pq-count-row"></div>
-      <div class="pq-warn pq-hidden" id="pq-setup-warn">Pick at least one topic.</div>
-      <button class="pq-start-btn" id="pq-start-btn">Start quiz</button>
-    </div>
-  </section>
+      <!-- ---- SETUP ---- -->
+      <section class="block" id="qz-setup-screen">
+        <p class="qz-intro">The bank has 100 board-style questions that follow the Board of Medicine Preventive Medicine &amp; Public Health Table of Specifications: each role gets its TOS weight (e.g., Health Care Provider 30 items, Administrative Manager 10 items), split by Revised Bloom's level exactly as the TOS lists it, from Remember through Create. Use <strong>All topics</strong> to build a mixed quiz, or open a topic tab to drill it level by level.</p>
 
-  <section class="block pq-hidden" id="pq-quiz-screen">
-    <div class="pq-top">
-      <span id="pq-q-counter">Question 1 of 10</span>
-      <span id="pq-q-score">Score: 0</span>
-    </div>
-    <div class="pq-progress-track"><div class="pq-progress-fill" id="pq-progress-fill" style="width:0%;"></div></div>
+        <div class="qz-tabs" id="qz-setup-tabs"></div>
 
-    <div class="pq-card">
-      <div class="pq-tag-row"><span class="pq-region-tag" id="pq-q-region-tag">Health Care Provider</span></div>
-      <p class="pq-text" id="pq-q-text">Question text</p>
-      <div class="pq-options" id="pq-q-options"></div>
-      <div class="pq-explain pq-hidden" id="pq-q-explain">
-        <span class="pq-verdict" id="pq-q-verdict"></span>
-        <span id="pq-q-explain-text"></span>
-      </div>
-      <button class="pq-next-btn pq-hidden" id="pq-next-btn">Next question</button>
-    </div>
-  </section>
+        <!-- All-topics panel -->
+        <div id="qz-panel-all">
+          <div class="qz-card">
+            <h3 class="block-title">Topics</h3>
+            <div class="qz-grid" id="qz-topic-grid"></div>
+            <div class="qz-actions">
+              <button class="qz-link-btn" id="qz-topic-all">Select all</button>
+              <button class="qz-link-btn" id="qz-topic-none">Clear all</button>
+            </div>
+          </div>
+          <div class="qz-card">
+            <h3 class="block-title">Cognitive level (Revised Bloom's)</h3>
+            <div class="qz-grid" id="qz-level-grid"></div>
+            <div class="qz-actions">
+              <button class="qz-link-btn" id="qz-level-all">Select all</button>
+              <button class="qz-link-btn" id="qz-level-none">Clear all</button>
+            </div>
+          </div>
+          <div class="qz-card">
+            <h3 class="block-title">Quiz length</h3>
+            <div class="qz-count-row" id="qz-count-row"></div>
+            <div class="qz-pool-note" id="qz-pool-note"></div>
+            <div class="qz-warn qz-hidden" id="qz-setup-warn">Pick at least one topic and one level.</div>
+            <button class="qz-start-btn" id="qz-start-btn">Start quiz</button>
+            <button class="qz-start-btn qz-alt" id="qz-full-btn">Take the full 100-item TOS exam</button>
+          </div>
+        </div>
 
-  <section class="block pq-hidden" id="pq-results-screen">
-    <div class="pq-card">
-      <div class="pq-score-hero">
-        <div class="pq-score-num" id="pq-final-score">0/0</div>
-        <div class="pq-score-sub" id="pq-final-pct">0% correct</div>
-      </div>
-    </div>
+        <!-- Single-topic panel (filled by script) -->
+        <div id="qz-panel-topic" class="qz-hidden"></div>
+      </section>
 
-    <div class="pq-card">
-      <h3 class="block-title">By topic</h3>
-      <div class="pq-cat-breakdown" id="pq-cat-breakdown"></div>
-    </div>
+      <!-- ---- QUIZ ---- -->
+      <section class="block qz-hidden" id="qz-quiz-screen">
+        <div class="qz-top">
+          <span id="qz-q-counter">Question 1 of 10</span>
+          <span><span id="qz-q-score">Score: 0</span> &nbsp;·&nbsp; <button class="qz-quit" id="qz-quit-btn">End quiz</button></span>
+        </div>
+        <div class="qz-progress-track"><div class="qz-progress-fill" id="qz-progress-fill" style="width:0%;"></div></div>
+        <div class="qz-card" id="qz-q-card">
+          <div class="qz-tag-row"><span class="qz-region-tag" id="qz-q-topic">Thorax</span><span class="qz-lv-badge" id="qz-q-level">Apply</span></div>
+          <p class="qz-text" id="qz-q-text">Question text</p>
+          <div class="qz-options" id="qz-q-options"></div>
+          <div class="qz-explain qz-hidden" id="qz-q-explain">
+            <span class="qz-verdict" id="qz-q-verdict"></span>
+            <span id="qz-q-explain-text"></span>
+          </div>
+          <button class="qz-next-btn qz-hidden" id="qz-next-btn">Next question</button>
+        </div>
+      </section>
 
-    <div class="pq-card" id="pq-miss-card">
-      <h3 class="block-title">Review missed questions</h3>
-      <div id="pq-miss-list"></div>
-    </div>
+      <!-- ---- RESULTS ---- -->
+      <section class="block qz-hidden" id="qz-results-screen">
+        <div class="qz-card">
+          <div class="qz-score-hero">
+            <div class="qz-score-num" id="qz-final-score">0/0</div>
+            <div class="qz-score-sub" id="qz-final-pct">0% correct</div>
+          </div>
+        </div>
 
-    <div class="pq-result-actions">
-      <button class="pq-btn-primary" id="pq-retry-missed-btn">Retry missed only</button>
-      <button class="pq-btn-secondary" id="pq-restart-btn">Start over</button>
-    </div>
-  </section>
+        <div class="qz-tabs" id="qz-result-tabs"></div>
+        <div id="qz-result-panel"></div>
 
-  <footer class="plate-foot"><span>Quiz Mode</span><span>Preventive Medicine Rapid Review &middot; PLE Board</span></footer>
-</article>
+        <div class="qz-result-actions">
+          <button class="qz-btn-primary" id="qz-retry-missed-btn">Retry missed only</button>
+          <button class="qz-btn-secondary" id="qz-restart-btn">Start over</button>
+        </div>
+      </section>
+
+      <footer class="plate-foot"><span>📝 Quiz Mode</span><span>Preventive Medicine Rapid Review &middot; PLE Board</span></footer>
+    </article>
   </main>
 </div>
 
@@ -912,269 +1001,370 @@ ol.facts-ol li{ padding:6px 2px; font-size:14px; line-height:1.6; }
 </script>
 
 <script>
-const PQ_REGIONS = [
-  {id:"hcp", num:"I", label:"Health Care Provider"},
-  {id:"phcs", num:"II", label:"Philippine Health Care System"},
-  {id:"admin", num:"III", label:"Administrative Manager"},
-  {id:"researcher", num:"IV", label:"Researcher"},
-  {id:"social", num:"V", label:"Social Mobilizer / Leader"},
-  {id:"sprint", num:"✦", label:"Final Sprint / Cross-Cutting"}
+/* ============================================================
+   QUIZ MODE: topics (Preventive Medicine & Public Health TOS roles) and Revised Bloom's levels
+   ============================================================ */
+const QZ_TOPICS = [
+  {id:'hcp',        num:'I',   label:'Health Care Provider', weight:'30%', scope:'Natural history of disease and levels of prevention; health promotion and education; family medicine tools (APGAR, SCREEM, genogram); screening; geriatric, mental, and palliative care; family health wellness plans.'},
+  {id:'phcs',       num:'II',  label:'Philippine Health Care System', weight:'30%', scope:'Primary health care; UHC (RA 11223) and devolution (RA 7160); vital and health statistics; morbidity and mortality data; disease surveillance and outbreak investigation (RA 11332); DOH programs; traditional medicine; bioethics and health laws.'},
+  {id:'admin',      num:'III', label:'Administrative Manager', weight:'10%', scope:'Management functions; health planning and program evaluation; occupational and school health; health facility levels; quality of care.'},
+  {id:'researcher', num:'IV',  label:'Researcher', weight:'20%', scope:'Epidemiologic study designs; measures of association (RR, OR, NNT); screening test indices; biostatistics and demography; bias and confounding; evidence-based medicine; research questions (PICO).'},
+  {id:'social',     num:'V',   label:'Social Mobilizer / Leader', weight:'10%', scope:'Community organizing and participation; social mobilization vs IEC; advocacy and leadership; disaster risk reduction and management (RA 10121); community health programs.'}
 ];
-const PQ_REGION_LABEL = Object.fromEntries(PQ_REGIONS.map(r=>[r.id,r.label]));
-
-const PQ_QUESTIONS = [
-{cat:'hcp', q:'A smoke-free workplace policy enacted before any employee develops smoking-related disease is an example of which level of prevention?', options:['Primordial prevention','Primary prevention','Secondary prevention','Tertiary prevention'], correct:0, exp:'Primordial prevention acts before risk factors become established in a population — policies like smoke-free environments or healthy built environments prevent the risk factor itself from taking hold, distinct from primary prevention which acts on already-present risk factors in susceptible individuals.'},
-{cat:'hcp', q:'Routine childhood vaccination, given to disease-free susceptible children, is an example of which level of prevention?', options:['Primary prevention','Primordial prevention','Secondary prevention','Tertiary prevention'], correct:0, exp:'Primary prevention intervenes in the prepathogenesis/susceptible stage before disease onset — vaccination, chemoprophylaxis, and nutrition programs are classic examples, targeting disease-free but at-risk persons.'},
-{cat:'hcp', q:'Treating a screen-detected cervical precancer found on Pap smear is classified as which level of prevention?', options:['Secondary prevention, not tertiary','Tertiary prevention','Primary prevention','Primordial prevention'], correct:0, exp:'A classic board trap: because the lesion was found through screening (subclinical/early pathogenesis) and treated promptly, it remains secondary prevention (early diagnosis and prompt treatment) even though \'treatment\' sounds tertiary.'},
-{cat:'hcp', q:'Post-stroke rehabilitation to limit disability in a patient with established cerebrovascular disease is an example of:', options:['Tertiary prevention','Secondary prevention','Primary prevention','Primordial prevention'], correct:0, exp:'Tertiary prevention addresses established, clinical/late-stage disease through disability limitation and rehabilitation — stroke rehab, post-amputation rehab, and assistive devices are classic examples.'},
-{cat:'hcp', q:'In screening program evaluation, apparent improved survival that is actually due to earlier detection rather than a true delay in death is called:', options:['Lead-time bias','Length-time bias','Selection bias','Recall bias'], correct:0, exp:'Lead-time bias occurs when screening simply advances the point of diagnosis without changing the actual time of death, making survival time look longer even though the disease course is unchanged.'},
-{cat:'hcp', q:'A screening program that preferentially detects slower-growing, less aggressive cases (because they have a longer detectable preclinical phase) creates which bias, making screening look more effective than it truly is?', options:['Length-time bias','Lead-time bias','Confounding bias','Observer bias'], correct:0, exp:'Length-time bias arises because slow-growing tumors have a longer asymptomatic detectable window and are therefore overrepresented among screen-detected cases, biasing outcomes to favor screening even without a true mortality benefit.'},
-{cat:'phcs', q:'In the Philippine referral system, a patient from the barangay level who needs primary care would typically first go through which facility before reaching a hospital?', options:['Barangay Health Station (BHS) / Rural Health Unit (RHU)','Tertiary or DOH-retained hospital directly','Provincial hospital directly','A private specialist clinic only'], correct:0, exp:'The standard Philippine referral flow is barangay/purok → BHS → RHU/Health Center/primary care provider → district/provincial/city hospital → tertiary/DOH-retained/apex hospital, with counter-referral back down the chain.'},
-{cat:'phcs', q:'Under RA 7160 (Local Government Code), which level of government is primarily responsible for maintaining barangay health centers/stations?', options:['Barangays','The national Department of Health directly','Provincial government only','Private health maintenance organizations'], correct:0, exp:'RA 7160 devolved health service delivery so that barangays maintain health stations/centers, municipalities provide primary health care and maternal-child services, while higher LGU levels manage hospitals, consistent with the devolution framework of the Local Government Code.'},
-{cat:'phcs', q:'RA 11223, the Universal Health Care Act, is primarily associated with which reform?', options:['Automatic PhilHealth enrollment/coverage for all Filipino citizens','Mandatory reporting of notifiable diseases','Creation of the barangay health worker program','Nationwide smoking ban in public places'], correct:0, exp:'RA 11223 (Universal Health Care Act) established automatic PhilHealth membership for all Filipinos and reorganized the health system toward integrated, population-based, and facility-based health care delivery.'},
-{cat:'phcs', q:'Which of the following is a classic distinction between the WHO\'s disease surveillance definitions: an \'outbreak\' versus an \'epidemic\'?', options:['An outbreak is often localized/smaller in scale, while epidemic implies wider geographic spread, though the terms are frequently used interchangeably in practice','An epidemic always precedes an outbreak','Outbreak refers only to non-infectious disease clusters','Epidemic requires international spread by definition (that would be a pandemic)'], correct:0, exp:'Outbreak and epidemic both describe disease occurrence clearly in excess of expected levels; outbreak is often used for a more localized event, while epidemic can imply a larger geographic area, though usage overlaps substantially in surveillance practice.'},
-{cat:'admin', q:'In the ten steps of an outbreak investigation, which step comes immediately after establishing the existence of an outbreak and verifying the diagnosis?', options:['Define and identify cases','Develop hypotheses','Implement control measures','Communicate findings'], correct:0, exp:'The classic sequence is: prepare for field work → establish the outbreak → verify diagnosis → define and identify cases → describe by time/place/person → develop hypotheses → evaluate hypotheses → refine/additional studies → implement control → communicate findings.'},
-{cat:'admin', q:'Under RA 11332 (Mandatory Reporting of Notifiable Diseases and Health Events), treating a patient with a notifiable disease:', options:['Does not by itself fulfill the separate legal duty to report the case','Automatically satisfies the reporting requirement','Is only required for internationally quarantinable diseases','Removes the need for any surveillance follow-up'], correct:0, exp:'A classic board trap: clinical treatment of a notifiable disease is a separate act from the legally mandated reporting duty under RA 11332 — both must be fulfilled independently, and failure to report remains a violation even if the patient was properly treated.'},
-{cat:'admin', q:'On an epidemic curve, a sudden common-source outbreak (e.g., a contaminated food source at a single event) classically produces which pattern?', options:['A sharp, narrow peak with a single incubation-period-width rise and fall','A slowly rising and slowly falling curve over many weeks','Multiple regularly spaced peaks matching serial generations of transmission','A flat, unchanging baseline'], correct:0, exp:'Point-source (common-source) outbreaks produce a sharp peak clustered within one incubation period, in contrast to propagated (person-to-person) outbreaks, which show successive waves spaced roughly one incubation period apart as transmission continues.'},
-{cat:'admin', q:'Birth and death certification in the Philippines is best classified as:', options:['An administrative/vital-statistics function, not a level of disease prevention','Tertiary prevention','Secondary prevention','Primordial prevention'], correct:0, exp:'Vital registration (birth/death certification) is an administrative and vital-statistics duty rather than a disease-prevention activity, a common distractor pairing tested on boards alongside true prevention-level interventions.'},
-{cat:'researcher', q:'In a 2x2 screening table, sensitivity is calculated as:', options:['True positives / (true positives + false negatives)','True positives / (true positives + false positives)','True negatives / (true negatives + false positives)','True negatives / (true negatives + false negatives)'], correct:0, exp:'Sensitivity = TP / (TP + FN) — the proportion of people who truly have the disease who are correctly identified as positive by the test; it answers \'among the sick, how many test positive?\''},
-{cat:'researcher', q:'Positive predictive value (PPV) of a screening test is most directly affected by which factor, distinguishing it from sensitivity and specificity?', options:['Disease prevalence in the population being tested','The test\'s cost','The lab technician\'s experience','The test\'s shelf life'], correct:0, exp:'Unlike sensitivity and specificity (intrinsic test properties), PPV and NPV depend heavily on disease prevalence — at low prevalence, even a highly specific test yields a lower PPV because false positives make up a larger share of all positives.'},
-{cat:'researcher', q:'A study that follows a cohort of exposed and unexposed individuals forward in time to compare incidence of disease is a classic design for calculating:', options:['Relative risk (risk ratio)','Odds ratio only','Prevalence ratio only','Attributable fraction only, never relative risk'], correct:0, exp:'Cohort studies track exposure status forward to measure incident disease, allowing direct calculation of relative risk (incidence in exposed / incidence in unexposed); case-control studies, by contrast, classically yield odds ratios.'},
-{cat:'researcher', q:'According to Wilson-Jungner screening criteria, which of the following is a required feature of a condition suitable for a screening program?', options:['The condition should have a recognizable latent or early symptomatic stage that can be detected','The condition must be untreatable once diagnosed','Screening must be performed on the entire world population simultaneously','The test must have zero false positives'], correct:0, exp:'Wilson-Jungner criteria require, among other things, a detectable latent/early stage, an accepted and available treatment, a suitable and acceptable test, and that the natural history of the condition be adequately understood — not perfection in any single criterion.'},
-{cat:'researcher', q:'The formula Incidence Rate = (Number of new cases in a period) / (Population at risk × time) is used to measure:', options:['The rate at which new cases of disease occur in a population over time','The proportion of a population that has a disease at one point in time','The ratio of deaths to total population','The case-fatality rate specifically'], correct:0, exp:'Incidence rate specifically measures NEW cases occurring per person-time at risk, distinguishing it from prevalence (existing cases at a point in time) and from mortality/case-fatality measures.'},
-{cat:'social', q:'RA 10121, the Philippine Disaster Risk Reduction and Management Act, established which framework?', options:['The four DRRM pillars: prevention/mitigation, preparedness, response, and rehabilitation/recovery','Mandatory face mask policy during epidemics','The national immunization program schedule','The Universal Health Care benefit package'], correct:0, exp:'RA 10121 established the National DRRM framework built on four pillars — prevention and mitigation, preparedness, response, and rehabilitation/recovery — shifting the country\'s disaster approach from reactive relief to proactive risk reduction.'},
-{cat:'social', q:'A community health education campaign that partners with local leaders and existing community structures to promote behavior change is best described as an example of:', options:['Social mobilization','Primordial prevention exclusively','Tertiary prevention exclusively','A legally mandated statutory duty'], correct:0, exp:'Social mobilization involves engaging community leaders, organizations, and stakeholders to collectively support a health goal or program, distinct from clinical prevention levels or a specific legal reporting duty.'},
-{cat:'social', q:'Under Philippine law, which duties are \'legally mandated\' as opposed to merely \'recommended/programmatic\'?', options:['Mandatory reporting of notifiable diseases under RA 11332','Encouraging patients to enroll in wellness programs','Suggesting a healthier diet to a patient','Recommending a community exercise program'], correct:0, exp:'A recurring board distinction: statutory duties (like disease reporting under RA 11332, or birth/death registration) carry legal force and penalties for non-compliance, while many public-health \'good practice\' recommendations (diet counseling, wellness promotion) are programmatic guidance without the same legal mandate.'}
+/* The Preventive Medicine TOS allots items to all six Revised Bloom's levels. */
+const QZ_LEVELS = [
+  {id:'rem', short:'REM', label:'Remember',   desc:'Recall laws, definitions, program targets, and rankings.'},
+  {id:'und', short:'UND', label:'Understand', desc:'Explain the concept or rationale behind a public-health principle.'},
+  {id:'app', short:'APP', label:'Apply',      desc:'Classify a scenario, compute an index, or choose the right tool.'},
+  {id:'ana', short:'ANA', label:'Analyze',    desc:'Interpret data, study findings, and program problems.'},
+  {id:'eva', short:'EVA', label:'Evaluate',   desc:'Judge the best action, indicator, or ethical response.'},
+  {id:'cre', short:'CRE', label:'Create',     desc:'Pick the best-designed plan, program, or research question.'}
 ];
 
-let pqSelectedRegions = new Set(PQ_REGIONS.map(r=>r.id));
-let pqCount = 10;
-let pqQuestions = [];
-let pqIndex = 0;
-let pqScore = 0;
-let pqAnswers = [];
+const QZ_QUESTIONS = [
+{"t": "hcp", "l": "rem", "q": "Vaccinating 10-year-old girls against HPV before sexual debut is which level of prevention?", "o": ["Primary prevention", "Primordial prevention", "Secondary prevention", "Tertiary prevention"], "a": 0, "e": "Primary prevention protects susceptible people before disease starts, through vaccination, sanitation, nutrition, or chemoprophylaxis. Primordial prevention stops risk factors from becoming established (e.g., tobacco-control policy). Secondary prevention finds and treats early disease (screening), and tertiary prevention limits disability."},
+{"t": "hcp", "l": "rem", "q": "The Declaration that defined Primary Health Care and set the goal \"Health for All by the Year 2000\" was adopted at which conference?", "o": ["Alma-Ata, USSR, 1978", "Ottawa, Canada, 1986", "Astana, Kazakhstan, 2018", "Jakarta, Indonesia, 1997"], "a": 0, "e": "The 1978 Alma-Ata conference (WHO/UNICEF) defined PHC as essential care based on practical, acceptable methods, universally accessible, with community participation, intersectoral collaboration, and appropriate technology. Ottawa (1986) produced the Health Promotion Charter, and Astana (2018) renewed the commitment to PHC for UHC."},
+{"t": "hcp", "l": "rem", "q": "What do the five components of the Family APGAR assess?", "o": ["Adaptation, Partnership, Growth, Affection, Resolve", "Appearance, Pulse, Grimace, Activity, Respiratory effort", "Access, Poverty, Growth, Attitude, Resources", "Age, Parity, Gravidity, Abortion, Residence"], "a": 0, "e": "The Family APGAR is a quick screen of a family member's satisfaction with family function: Adaptation (sharing resources), Partnership (shared decisions), Growth (support for change), Affection (emotional response), and Resolve (commitment of time). A low score flags possible dysfunction affecting care. SCREEM assesses family resources, and Appearance, Pulse, Grimace, Activity, Respiration is the newborn Apgar score."},
+{"t": "hcp", "l": "rem", "q": "Screening tests are designed to detect disease during which stage of its natural history?", "o": ["Subclinical (preclinical) stage of pathogenesis", "Prepathogenesis stage, before any exposure occurs", "Late clinical stage, with disability already established", "Recovery stage, after the disease has fully resolved"], "a": 0, "e": "Screening targets the detectable preclinical phase, after biologic onset but before symptoms (the clinical horizon). This is secondary prevention. Primordial and primary prevention act in prepathogenesis, and tertiary prevention acts in late disease to limit disability."},
+{"t": "hcp", "l": "und", "q": "Why is a national policy that keeps children from ever starting to smoke classified as primordial rather than primary prevention?", "o": ["It stops the risk factor itself from becoming established in the population", "It prevents lung cancer in current smokers by making them quit smoking", "It detects early lung disease in smokers before symptoms have appeared", "It limits disability in people who already have established smoking-related disease"], "a": 0, "e": "Primordial prevention acts upstream on social, economic, and environmental conditions, so risk factors never emerge in the population (smoke-free policies, healthy school food, active-transport design). Primary prevention reduces disease onset in people exposed to risk factors, for example helping smokers quit before disease develops."},
+{"t": "hcp", "l": "und", "q": "Screening for a cancer appears to lengthen survival after diagnosis, yet the age at death is unchanged. What bias explains this?", "o": ["Lead-time bias: diagnosis happens earlier, but the time of death is not delayed", "Length bias: slow-growing tumors are more likely to be picked up by periodic screening", "Recall bias: screened patients remember their prior exposures more accurately", "Confounding: screened patients differ from unscreened ones in smoking habits"], "a": 0, "e": "Lead time is the interval by which screening advances diagnosis. Survival measured from diagnosis appears longer even if screening does not delay death. Length bias arises because screening preferentially detects slow-growing, less aggressive tumors. Randomized trials using mortality as the endpoint avoid both biases."},
+{"t": "hcp", "l": "und", "q": "How does health promotion differ from health education?", "o": ["Promotion also changes policies and environments, not just individual knowledge", "Promotion is limited to one-on-one counseling during clinic visits only", "Education includes legislation and policy, while promotion does not", "They are identical terms used interchangeably in Philippine public health practice"], "a": 0, "e": "Health education builds knowledge, attitudes, and skills. Health promotion (Ottawa Charter) is broader: it builds healthy public policy, creates supportive environments, strengthens community action, develops personal skills, and reorients health services. Education is one component of promotion."},
+{"t": "hcp", "l": "und", "q": "What distinguishes Primary Health Care (PHC) from primary care?", "o": ["PHC is a societal strategy with community participation and intersectoral action; primary care is first-contact care", "Primary care is broader than PHC and includes national health policy, financing, legislation, and intersectoral planning", "PHC refers only to services given in tertiary hospitals by specialists", "They mean the same thing: care provided by general practitioners in clinics"], "a": 0, "e": "Primary care is the first-contact, continuous, comprehensive, coordinated personal care given by a PCP. Primary Health Care is an approach and philosophy (Alma-Ata, Astana) that includes primary care but also addresses social determinants, community participation, appropriate technology, and multisectoral collaboration. \"Primary care ≠ Primary Health Care\" is a classic board trap."},
+{"t": "hcp", "l": "und", "q": "Why is the \"web of causation\" model more useful than a single-agent model for explaining diseases like coronary heart disease?", "o": ["NCDs arise from many interacting causes (diet, smoking, genes, stress) rather than one agent", "NCDs are always caused by a single infectious agent that is hard to culture", "The single-agent model applies only to genetic diseases, not to NCDs", "The web model assumes that each risk factor alone is both necessary and sufficient to cause disease"], "a": 0, "e": "Chronic diseases result from multiple interacting risk factors and determinants, each neither necessary nor sufficient. The web shows many points where prevention can act. The epidemiologic triad of agent, host, and environment suits infectious diseases, and the causal-pie model shows how component causes combine."},
+{"t": "hcp", "l": "app", "q": "A 62-year-old enrolls in a supervised exercise and occupational therapy program after a stroke left him with right-sided weakness. What level of prevention is this?", "o": ["Tertiary prevention", "Secondary prevention", "Primary prevention", "Primordial prevention"], "a": 0, "e": "Rehabilitation after established disease limits disability and restores function, which is tertiary prevention. Controlling his blood pressure after the stroke to prevent another is also often grouped as tertiary, or as secondary prevention of recurrence. Detecting his hypertension before the stroke would have been secondary prevention."},
+{"t": "hcp", "l": "app", "q": "A family physician wants to assess what resources a family can draw on during a crisis (social, cultural, religious, economic, educational, medical). Which tool is appropriate?", "o": ["SCREEM", "Family APGAR", "Genogram", "Family life cycle"], "a": 0, "e": "SCREEM identifies family resources and gaps across Social, Cultural, Religious, Economic, Educational, and Medical domains, which is useful for planning support. The Family APGAR measures satisfaction with family function. A genogram maps structure and hereditary patterns over at least three generations. The family life cycle identifies developmental stage and expected tasks."},
+{"t": "hcp", "l": "app", "q": "A 78-year-old on nine medications has had two falls this month. What is the most appropriate primary-care approach?", "o": ["Comprehensive geriatric assessment with review of fall-risk medications", "Prescribe a sedative at night so she stays in bed and avoids falling in the dark", "Order a brain MRI first, before any history or medication review", "Advise complete bed rest until the cause of the falls is known"], "a": 0, "e": "Falls in the elderly are multifactorial. A comprehensive geriatric assessment reviews gait, balance, vision, cognition, postural hypotension, home hazards, and polypharmacy, deprescribing sedatives and antihypertensives where possible (Beers criteria). Exercise and home modification reduce falls, while bed rest and sedatives increase deconditioning and fall risk."},
+{"t": "hcp", "l": "app", "q": "A 35-year-old has had low mood, poor sleep, and loss of interest for 6 weeks. PHQ-9 is 13, she has no suicidal ideation, and she functions at work. What is the best management in primary care?", "o": ["Psychoeducation and psychological support, antidepressant if indicated, and follow-up", "Immediate involuntary admission to a psychiatric hospital for full evaluation and observation", "Reassurance only, telling her that everyone feels sad at times", "Referral to a neurologist for an EEG before starting any treatment"], "a": 0, "e": "Moderate depression without risk features can be managed in primary care (WHO mhGAP). Offer psychoeducation, a psychological intervention (problem-solving, behavioral activation), and consider an SSRI, with regular follow-up and safety monitoring. Refer for severe depression, psychosis, or suicide risk. RA 11036 integrates mental health into primary care."},
+{"t": "hcp", "l": "app", "q": "After teaching a newly diagnosed patient how to inject insulin, what is the best way for the physician to confirm understanding?", "o": ["Ask him to explain and demonstrate the steps back (teach-back)", "Have him sign a form stating that he understood everything", "Give him a detailed pamphlet to read at home by himself", "Ask \"Do you understand?\" and accept a simple \"yes\" as confirmation"], "a": 0, "e": "Teach-back asks the patient to restate or demonstrate the instructions in his own words, which reveals gaps so the clinician can re-teach. A signature or a yes/no question does not show comprehension. Written materials help but should match the patient's literacy level."},
+{"t": "hcp", "l": "app", "q": "A family's monthly income is ₱20,000. The father's illness this month cost ₱5,000 for medicines, ₱3,000 for transport, and ₱4,000 in lost wages. What proportion of income did the illness consume?", "o": ["60%", "40%", "25%", "15%"], "a": 0, "e": "Total cost = 5,000 + 3,000 + 4,000 = ₱12,000, and 12,000 ÷ 20,000 = 60%. Out-of-pocket health spending that exceeds a household's capacity to pay is catastrophic health expenditure. Counting indirect costs such as lost wages captures the full economic burden, which is why UHC (RA 11223) aims for financial risk protection."},
+{"t": "hcp", "l": "app", "q": "A healthy newborn has a heel-prick blood sample taken at 24 hours of life for expanded newborn screening. What level of prevention is this?", "o": ["Secondary prevention", "Primary prevention", "Tertiary prevention", "Primordial prevention"], "a": 0, "e": "Newborn screening (RA 9288) detects disorders such as congenital hypothyroidism, CAH, PKU, and G6PD deficiency in the presymptomatic stage so that early treatment can prevent disability and death, which is secondary prevention. Vitamin K and hepatitis B vaccination at birth are primary prevention. Managing an established complication is tertiary prevention."},
+{"t": "hcp", "l": "app", "q": "In a malaria-endemic barangay, residents are given long-lasting insecticide-treated nets before the rainy season. What level of prevention is this?", "o": ["Primary prevention", "Secondary prevention", "Tertiary prevention", "Quaternary prevention"], "a": 0, "e": "Insecticide-treated nets reduce exposure of susceptible people to infected mosquitoes before infection occurs, so they are primary prevention, like vector-source reduction and chemoprophylaxis. Early diagnosis and prompt treatment of malaria cases is secondary prevention. Quaternary prevention protects patients from overmedicalization."},
+{"t": "hcp", "l": "ana", "q": "Workers in a noisy factory receive two interventions: annual audiometry to detect early hearing loss, and installation of sound-absorbing enclosures around the machines. How should these be classified?", "o": ["Audiometry is secondary prevention; the enclosures are primary prevention", "Audiometry is primary prevention; the enclosures are secondary prevention", "Both are tertiary prevention because workers are already exposed", "Both are primordial prevention because they are workplace policies"], "a": 0, "e": "Medical surveillance detects early effects (subclinical disease), which is secondary prevention. Engineering controls remove or reduce the hazard before injury, which is primary prevention and ranks above PPE in the hierarchy of controls. Removing the exposure is primary, and detecting its effects is secondary."},
+{"t": "hcp", "l": "ana", "q": "A woman's Pap smear shows CIN 2, which is treated by LEEP. A colleague calls this tertiary prevention. What is the correct classification and reasoning?", "o": ["Secondary prevention: treating screen-detected precancer is early detection and treatment", "Tertiary prevention: the lesion is already established disease that needs definitive treatment", "Primary prevention: removing the lesion prevents invasive cancer from starting", "Primordial prevention: the procedure changes the underlying risk environment"], "a": 0, "e": "Screening plus prompt treatment of the detected lesion is secondary prevention, a common board trap. Tertiary prevention applies to established clinical disease with complications or disability, such as rehabilitation after cancer treatment. HPV vaccination is primary prevention."},
+{"t": "hcp", "l": "ana", "q": "A proposal suggests routine abdominal ultrasound screening for pancreatic cancer in all adults. Using Wilson–Jungner criteria, what is the main reason it fails?", "o": ["No effective early treatment or accurate screening test exists for the general population", "Pancreatic cancer is not an important health problem because it is rarely fatal", "The natural history of pancreatic cancer is fully understood, predictable, and slowly progressive", "Ultrasound is too cheap, so the program would not be cost-effective"], "a": 0, "e": "Wilson–Jungner requires an important condition, a recognizable latent stage, an acceptable and suitable test, an effective early treatment, facilities, an agreed treatment policy, reasonable cost, and continuing case finding. Population screening for pancreatic cancer lacks an accurate test and a proven benefit from early treatment, so false positives would cause harm."},
+{"t": "hcp", "l": "ana", "q": "A 45-year-old woman declines mammography, saying \"breast cancer doesn't run in our family, so it won't happen to me.\" Which Health Belief Model construct most explains her decision?", "o": ["Low perceived susceptibility", "Low perceived benefits", "High self-efficacy", "Strong external cue to action"], "a": 0, "e": "The Health Belief Model predicts action when a person perceives susceptibility and severity, believes the benefits outweigh the barriers, receives cues to action, and feels self-efficacy. Her belief that she is not at risk reflects low perceived susceptibility. Education about sporadic risk and personalized invitations (cues) can help."},
+{"t": "hcp", "l": "ana", "q": "An elderly diabetic man repeatedly misses medicines. His Family APGAR score is 3/10, and he says no one at home helps or listens. What is the most appropriate interpretation?", "o": ["Family dysfunction is likely contributing to poor adherence and should be addressed", "A low score confirms he has dementia and needs neurologic referral", "The score measures diabetes control, so his blood glucose must be very poorly controlled", "A low score is normal for elderly people and needs no further action"], "a": 0, "e": "A Family APGAR of 0–3 suggests severe dysfunction (4–6 moderate, 7–10 functional) from the patient's perspective. Family support strongly affects chronic disease management. Explore family dynamics, involve caregivers, and use resources identified through SCREEM. It is a family-function screen, not a diagnostic test for dementia."},
+{"t": "hcp", "l": "ana", "q": "A woman with metastatic breast cancer still receiving chemotherapy has uncontrolled pain and anxiety. Her oncologist says palliative care is only for the last days of life. Which statement is correct?", "o": ["Palliative care can run alongside cancer treatment and is chiefly tertiary prevention", "Palliative care must wait until all chemotherapy has stopped completely", "Palliative care is secondary prevention because it detects disease early", "Palliative care is the same as hospice care and is limited to the final week before death"], "a": 0, "e": "Palliative care relieves symptoms and addresses psychosocial and spiritual needs throughout serious illness and can coexist with chemotherapy. Hospice is narrower, end-of-life care. RA 11215 includes palliative care, pain management, and survivorship in cancer control. Limiting suffering and disability is tertiary prevention."},
+{"t": "hcp", "l": "ana", "q": "An adult's risk of dying from a disease is 30% if untreated and 10% with a new program. Which statement correctly describes the program's benefit?", "o": ["Absolute risk reduction 20%; number needed to treat 5", "Absolute risk reduction 10%; number needed to treat 10", "Relative risk reduction 20%; number needed to treat 20", "Relative risk 3.0; number needed to treat 3"], "a": 0, "e": "ARR = 30% − 10% = 20% (0.20), and NNT = 1/ARR = 1/0.20 = 5. RRR = ARR ÷ baseline risk = 0.20/0.30 ≈ 67%. RR (treated vs untreated) = 0.10/0.30 ≈ 0.33. The NNT expresses benefit in terms useful for program and clinical decisions."},
+{"t": "hcp", "l": "eva", "q": "A municipality with rising hypertension wants the most effective long-term prevention strategy. Which approach is best?", "o": ["Combine a population strategy (salt reduction, healthy settings) with high-risk screening and treatment", "Screen only adults over 70 years of age and ignore the younger population entirely, with no policy change", "Distribute pamphlets once a year without any policy or follow-up care", "Treat only patients who come in with a stroke or heart attack"], "a": 0, "e": "Rose's prevention paradox: shifting the whole population's risk distribution (primordial and primary measures such as sodium reduction, active-transport design, tobacco control) prevents more events than targeting high-risk people alone. Combining it with screening and control of individuals at high risk (secondary prevention) is most effective."},
+{"t": "hcp", "l": "eva", "q": "For the first-stage screening test of a serious, treatable disease where missing a case would be dangerous, which test property should be prioritized?", "o": ["High sensitivity, followed by a highly specific confirmatory test", "High specificity, even if many true cases will be missed", "Low cost, regardless of the test's sensitivity or specificity", "High positive predictive value, even in a low-prevalence general population"], "a": 0, "e": "A sensitive test minimizes false negatives, so a negative result reliably rules disease out (\"SnNout\"). Positives are then confirmed with a specific test (\"SpPin\") to eliminate false positives. PPV depends on prevalence and is inherently low in low-prevalence populations."},
+{"t": "hcp", "l": "eva", "q": "A 70-year-old on 11 medications has confusion, dizziness, and falls. Several drugs have overlapping effects. What is the most appropriate management?", "o": ["Structured medication review with deprescribing of unnecessary or high-risk drugs", "Add a cognitive enhancer and a vestibular sedative to treat the confusion and dizziness", "Continue all medications but schedule them at different times of day", "Refer to multiple specialists separately without coordinating a plan"], "a": 0, "e": "Polypharmacy is a major cause of geriatric syndromes. Reconcile medications, identify potentially inappropriate drugs (Beers or STOPP criteria), and deprescribe with monitoring. Adding drugs to treat side effects creates a prescribing cascade. Multidisciplinary care requires a shared plan and a coordinator, not scattered referrals."},
+{"t": "hcp", "l": "eva", "q": "During a consultation, a patient with depression says she has a plan to end her life this week. What is the most appropriate action?", "o": ["Ensure immediate safety and arrange urgent specialist referral or admission", "Prescribe an SSRI and schedule a follow-up visit in one month", "Reassure her that the feeling will pass and send her home alone", "Keep it strictly confidential and avoid involving family or other health providers"], "a": 0, "e": "Active suicidal ideation with a plan is an emergency. Do not leave her alone, remove access to means, and involve family and crisis or psychiatric services for urgent assessment. Confidentiality may be breached to protect life. Starting an SSRI with delayed follow-up is unsafe. RA 11036 supports integrated crisis care."},
+{"t": "hcp", "l": "eva", "q": "Which indicator best shows that a diabetes health-education program for a barangay was effective?", "o": ["Proportion of participants achieving target HbA1c (glucose) control", "Number of health seminars and lectures conducted during the program year", "Number of attendees who signed the attendance sheet", "Number of pamphlets distributed to households"], "a": 0, "e": "Seminars held and pamphlets distributed are outputs, and attendance is process. Effectiveness is judged by outcomes (behavior change, glycemic control) and ultimately impact (fewer complications and deaths). \"Output ≠ outcome\" is a recurring board trap in program evaluation."},
+{"t": "hcp", "l": "cre", "q": "Which Family Health Wellness Plan is best designed for a family with a hypertensive smoking father, a mother with gestational diabetes history, and an obese 10-year-old?", "o": ["Family-agreed SMART goals: cessation support, shared diet and activity changes, BP and glucose checks, roles, follow-up dates", "A single lecture on healthy lifestyle given to the father only, with no family targets, assigned roles, or follow-up schedule", "Prescriptions for each person handed out separately, with the family told to return only if symptoms appear", "A pamphlet on obesity given to the child, with the parents' risk factors left for future consultations"], "a": 0, "e": "A good family wellness plan is family-centered and built with the family. It sets SMART goals (Specific, Measurable, Achievable, Relevant, Time-bound), addresses each member's risks with shared interventions, assigns roles, uses available resources, and schedules monitoring and follow-up. Single, individual, or information-only actions are incomplete."},
+{"t": "phcs", "l": "rem", "q": "According to PSA 2025 provisional data, what is the leading cause of death in the Philippines?", "o": ["Ischemic heart diseases", "Neoplasms", "Cerebrovascular diseases", "Pneumonia"], "a": 0, "e": "The PSA 2025 provisional ranking lists ischemic heart diseases first, then neoplasms, cerebrovascular diseases, pneumonia, and diabetes mellitus. Non-communicable diseases dominate mortality, while respiratory infections dominate morbidity. Always note the data source and year, since rankings are updated."},
+{"t": "phcs", "l": "rem", "q": "Which law automatically includes every Filipino in the National Health Insurance Program and establishes primary care providers as navigators?", "o": ["RA 11223, Universal Health Care Act", "RA 7160, Local Government Code", "RA 11332, Mandatory Reporting Act", "RA 10354, Responsible Parenthood Act"], "a": 0, "e": "RA 11223 (2019) enrolls all Filipinos automatically in PhilHealth, guarantees comprehensive preventive-to-palliative services, integrates province- and city-wide health systems, creates health care provider networks with PCPs as navigators, and institutionalizes health technology assessment."},
+{"t": "phcs", "l": "rem", "q": "Which law devolved basic health services (barangay health stations, rural health units, provincial hospitals) to local government units?", "o": ["RA 7160, Local Government Code of 1991", "RA 11223, Universal Health Care Act", "RA 10121, DRRM Act of 2010", "RA 7305, Magna Carta of Public Health Workers"], "a": 0, "e": "The Local Government Code shifted many frontline health functions from DOH to LGUs: barangays and municipalities run BHS and RHU primary care, and provinces run district and provincial hospitals. DOH retains policy, regulation, technical assistance, and DOH-retained hospitals. Devolution explains uneven program implementation across LGUs."},
+{"t": "phcs", "l": "rem", "q": "According to DOH/FHSIS 2023 preliminary data, what is the leading cause of morbidity in the Philippines?", "o": ["Acute respiratory infection", "Hypertension", "Animal bites (dogs and cats)", "Urinary tract infection"], "a": 0, "e": "The DOH/FHSIS 2023 preliminary top morbidity causes are acute respiratory infection, hypertension, animal bites, urinary tract infection, and acute lower respiratory tract infection. Remember that rank is not the same as rate, and that morbidity and mortality come from different data systems (FHSIS vs PSA civil registration)."},
+{"t": "phcs", "l": "und", "q": "Why does devolution under RA 7160 matter when planning a health program?", "o": ["LGUs run frontline services, so local leadership, funding, and capacity shape delivery", "The DOH directly hires, staffs, and funds every barangay health station and rural health unit", "Devolution centralized all hospitals under the Department of Health", "Devolution removed any role for LGUs in primary health services"], "a": 0, "e": "Since 1991, municipal and city LGUs manage RHUs and BHS, and provinces manage hospitals. Program success therefore depends on local executives, budgets, and health workforce. UHC (RA 11223) addresses fragmentation by integrating LGU services into province- and city-wide health systems and pooling financing."},
+{"t": "phcs", "l": "und", "q": "Under UHC, why is the primary care provider designated as navigator and initial point of contact?", "o": ["To coordinate continuous care and manage referral to higher levels, except in emergencies", "To prevent patients from ever reaching specialists or hospitals, even when they need higher-level care", "To replace hospitals completely with barangay-level services", "To collect PhilHealth premiums directly from each patient"], "a": 0, "e": "The PCP provides first-contact, continuing, comprehensive care, registers and profiles individuals, and coordinates referral to and from higher-level facilities in the health care provider network. Emergency and serious cases may bypass the usual referral route. This strengthens efficiency and continuity."},
+{"t": "phcs", "l": "und", "q": "Why is the infant mortality rate considered a sensitive indicator of a community's overall health and socioeconomic status?", "o": ["Infant deaths closely reflect maternal care, nutrition, sanitation, and access to services", "Infants are rarely affected by environmental or social conditions", "IMR measures only congenital anomalies, which reflect genetic factors alone and not the environment", "IMR is calculated from the total population, so it captures all ages"], "a": 0, "e": "Infant survival depends on maternal health, antenatal and delivery care, breastfeeding, immunization, sanitation, and household income, so IMR responds quickly to changes in living conditions and services. IMR = infant deaths (under 1 year) ÷ live births × 1,000. Its denominator is live births, not the population."},
+{"t": "phcs", "l": "und", "q": "During an outbreak, how does quarantine differ from isolation?", "o": ["Quarantine restricts exposed well persons; isolation separates confirmed or probable cases", "Quarantine is for sick cases; isolation is for healthy contacts only", "Both terms mean the same thing and can be used interchangeably", "Isolation applies only to imported animals, while quarantine applies to humans at ports of entry"], "a": 0, "e": "Isolation separates infected people (cases) to prevent transmission. Quarantine restricts the movement of people who were exposed but are not yet ill, for the incubation period. RA 11332 authorizes these measures during public-health emergencies, while respecting rights and data privacy."},
+{"t": "phcs", "l": "und", "q": "An epidemic curve shows a sharp single peak, with most cases occurring within one incubation period. What does this indicate?", "o": ["A point-source outbreak: a group exposed once to a common source", "Propagated person-to-person spread with successive generations of cases", "A continuous common source producing a long plateau of cases", "An endemic disease present at stable levels all year round"], "a": 0, "e": "A point source (e.g., contaminated food at one party) produces a tight peak whose width reflects the range of incubation periods. A continuous common source produces a plateau. An intermittent source produces irregular peaks. Propagated spread produces successive, progressively taller waves about one incubation period apart."},
+{"t": "phcs", "l": "app", "q": "A municipality's weekly dengue cases over past years average 20, with a standard deviation of 4. Using the illustrative mean + 2 SD rule, what is the epidemic threshold?", "o": ["28 cases per week", "24 cases per week", "40 cases per week", "22 cases per week"], "a": 0, "e": "Threshold = mean + 2 SD = 20 + 2(4) = 28. Weekly counts above this suggest an outbreak (more cases than expected). DOH disease-specific alert and epidemic thresholds take precedence where defined. For eliminated or unusual diseases, a single case can trigger investigation."},
+{"t": "phcs", "l": "app", "q": "Of 200 guests at a fiesta, 60 developed vomiting and diarrhea within 6 hours of eating. What is the attack rate?", "o": ["30%", "60%", "3.3%", "12%"], "a": 0, "e": "Attack rate = ill persons ÷ persons at risk (exposed) × 100 = 60 ÷ 200 = 30%. It is an incidence proportion used during outbreaks. Food-specific attack rates (ate vs did not eat each food) identify the likely vehicle."},
+{"t": "phcs", "l": "app", "q": "In a leptospirosis outbreak there were 50 confirmed cases and 5 deaths. The town population is 25,000. What is the case fatality rate?", "o": ["10%", "0.02%", "20 per 1,000", "2%"], "a": 0, "e": "CFR = deaths from the disease ÷ cases of the disease × 100 = 5/50 = 10%. It measures severity or lethality. The cause-specific mortality rate uses the population as its denominator: 5/25,000 = 20 per 100,000. Using the wrong denominator is a classic trap."},
+{"t": "phcs", "l": "app", "q": "A province recorded 6,000 live births and 90 deaths of infants under 1 year in a year. What is the infant mortality rate?", "o": ["15 per 1,000 live births", "1.5 per 1,000 live births", "90 per 100,000 live births", "66.7 per 1,000 live births"], "a": 0, "e": "IMR = infant deaths ÷ live births × 1,000 = 90 ÷ 6,000 × 1,000 = 15 per 1,000 live births. The neonatal mortality rate counts deaths under 28 days. The maternal mortality ratio uses a multiplier of 100,000 live births."},
+{"t": "phcs", "l": "app", "q": "A city had 12,000 live births and 6 maternal deaths in a year. What is the maternal mortality ratio?", "o": ["50 per 100,000 live births", "5 per 1,000 live births", "0.5 per 1,000 live births", "500 per 100,000 live births"], "a": 0, "e": "MMR = maternal deaths ÷ live births × 100,000 = 6 ÷ 12,000 × 100,000 = 50. The multiplier is 100,000 because maternal deaths are relatively rare. Maternal deaths are deaths during pregnancy or within 42 days of its end from pregnancy-related causes."},
+{"t": "phcs", "l": "app", "q": "A patient with newly detected, uncomplicated hypertension at a barangay health station needs further evaluation and long-term care. Where should he be referred first?", "o": ["The RHU / health center or his primary care provider", "Directly to a DOH-retained tertiary specialty hospital", "The regional hospital emergency room for admission", "No referral; the barangay health worker manages alone"], "a": 0, "e": "The usual pathway is community/BHS → RHU/health center/PCP → district, provincial, or city hospital → tertiary or DOH-retained hospital, with counter-referral back. The PCP coordinates care, and emergencies may bypass levels. Stable NCDs are managed at primary care under the NCD program and PhilHealth YAKAP."},
+{"t": "phcs", "l": "app", "q": "Which set of actions makes up the DOH \"4S\" strategy against dengue?", "o": ["Search and destroy breeding sites, self-protection, seek early consultation, support fogging in outbreaks", "Screen, sterilize, supplement, and surgically manage every suspected dengue case", "Spray insecticides weekly, stop all school classes, and start antibiotics for everyone", "Store water in open drums, sleep outdoors, self-medicate with antibiotics, and seek care only if bleeding"], "a": 0, "e": "The 4S strategy stresses community source reduction (the most effective measure), personal protection (repellents, long sleeves, screens), early consultation for fever to catch warning signs, and fogging only during outbreaks or hotspots. It is paired with surveillance and risk communication."},
+{"t": "phcs", "l": "app", "q": "Households in a town get piped water through individual faucets inside their homes from a waterworks system. What level of water supply is this?", "o": ["Level III", "Level II", "Level I", "Level 0"], "a": 0, "e": "Level I is a point source (protected well or spring) serving nearby households. Level II is a communal faucet system (piped to public taps). Level III is a waterworks system with individual house connections, usually for urban areas. Safe water and sanitation are primary prevention against diarrheal diseases."},
+{"t": "phcs", "l": "ana", "q": "An epidemic curve of an illness in a town shows successive waves of cases, each taller than the last and spaced roughly one incubation period apart. What is the most likely mode of spread?", "o": ["Propagated (person-to-person) transmission", "Point-source common exposure", "Continuous common-source exposure", "Intermittent common-source exposure over several weeks"], "a": 0, "e": "Successive generations of cases, one incubation period apart and growing larger, indicate person-to-person spread (e.g., measles, influenza). Control focuses on isolation, vaccination, contact tracing, and quarantine. Common-source outbreaks need the source identified and removed."},
+{"t": "phcs", "l": "ana", "q": "After a school lunch, food-specific attack rates were: ate salad 40/50 ill vs not 5/50; ate chicken 25/60 ill vs not 20/40; ate rice 30/70 ill vs not 15/30. Which food is the most likely vehicle?", "o": ["Salad", "Chicken", "Rice", "All three equally"], "a": 0, "e": "Compare attack rates in those who ate and those who did not eat each food. Salad: 80% vs 10% (RR 8). Chicken: 42% vs 50% (RR about 0.8). Rice: 43% vs 50% (RR about 0.9). The food with the highest attack rate among eaters, a low rate among non-eaters, and the greatest ratio is implicated. Confirm with laboratory testing and a traceback."},
+{"t": "phcs", "l": "ana", "q": "Town A reported 120 TB cases and Town B 60 cases this year. Town A has 200,000 residents and Town B has 50,000. Which conclusion is correct?", "o": ["Town B has the higher TB rate (120 vs 60 per 100,000)", "Town A has the higher TB rate because it has more cases", "Both towns have the same rate of TB per 100,000", "Rates cannot be compared without mortality data"], "a": 0, "e": "A: 120/200,000 = 60 per 100,000. B: 60/50,000 = 120 per 100,000. Counts reflect population size, and rates allow fair comparison. \"Rank ≠ rate\" and \"count ≠ rate\" are recurring board traps."},
+{"t": "phcs", "l": "ana", "q": "Province X has a higher crude death rate than Province Y, but X has a much older population. What is the appropriate next step before concluding that X is less healthy?", "o": ["Compare age-standardized (age-adjusted) death rates", "Compare the absolute number of deaths only", "Assume that the older population is irrelevant", "Compare the crude birth rates of the two provinces first"], "a": 0, "e": "Crude rates are confounded by age structure, since older populations naturally have more deaths. Direct or indirect standardization (e.g., the SMR) removes this effect so populations can be compared fairly. Age-specific rates can also be compared directly."},
+{"t": "phcs", "l": "ana", "q": "A single laboratory-confirmed case of measles is reported in a barangay that had none for years. The weekly count is far below any statistical threshold. What is the correct interpretation?", "o": ["Investigate at once; one case of an eliminated or rare disease is significant", "No action; one case is below the mean + 2 SD epidemic threshold", "Wait until at least five cases occur before notifying authorities", "Treat the patient privately; reporting to the health office is optional for single cases"], "a": 0, "e": "For diseases targeted for elimination or eradication (measles, polio/AFP) or unusual events, a single case warrants immediate notification and investigation, whatever the numeric threshold. RA 11332 requires accurate and immediate reporting of designated notifiable diseases."},
+{"t": "phcs", "l": "ana", "q": "Repeated diarrhea outbreaks occur in an informal settlement where households share an open well and have no toilets. What is the most important root cause to address?", "o": ["Unsafe water supply and lack of sanitary toilets (environmental determinants)", "Individual residents' poor handwashing habits alone, regardless of their environment", "A single infected food handler in the community", "Lack of antibiotics at the barangay health station"], "a": 0, "e": "The ecologic view of health and social determinants recognizes that environmental conditions (unsafe water, no sanitation, poverty) drive recurrent disease. Upstream interventions such as safe water, sanitary toilets, and waste management (PD 856, Clean Water Act) prevent more illness than individual-level hygiene messages or treatment alone."},
+{"t": "phcs", "l": "ana", "q": "A farmer with a chronic wound first consulted an albularyo for weeks and came to the RHU only when it became infected. What best explains his delay?", "o": ["Health-seeking behavior shaped by cultural beliefs, trust, cost, and access barriers", "He had no symptoms, so he had no reason to seek care earlier", "Traditional healers are legally required to see patients first under the Traditional Medicine Act", "Rural health units are open only to patients with referrals"], "a": 0, "e": "Health-seeking behavior depends on beliefs, perceived severity, trust, cost, distance, and cultural practices. Traditional healers are often the first contact in rural communities. Effective primary care engages them respectfully, addresses barriers, and educates, rather than dismissing local beliefs."},
+{"t": "phcs", "l": "eva", "q": "A rural health physician learns of a cholera cluster traced to a contaminated barangay water source. What is the most appropriate action while the investigation continues?", "o": ["Start control measures now (safe water, chlorination, case management) and report at once", "Wait until all 10 outbreak investigation steps are finished before any intervention begins", "Treat only the patients and avoid informing health authorities", "Close the RHU temporarily to prevent further spread of cholera"], "a": 0, "e": "Control and prevention measures should start as soon as a likely source is known, rather than waiting for step 9 of the investigation, when delay would cause preventable harm. Report immediately under RA 11332. Continue surveillance and communicate findings. Oral rehydration and case management reduce deaths."},
+{"t": "phcs", "l": "eva", "q": "A physician treats a child with confirmed diphtheria and believes that treating the child is enough. Which course of action best meets legal and public-health duties?", "o": ["Report immediately to health authorities as required by RA 11332, and continue treatment", "No report is needed once the patient is already receiving appropriate antibiotic and antitoxin treatment", "Report only if the patient dies or other children become sick", "Report the case at the end of the year in the annual clinic census"], "a": 0, "e": "RA 11332 requires public and private physicians to report nationally notifiable diseases and health events accurately and immediately. Treatment does not replace reporting, which enables contact tracing, prophylaxis, vaccination, and outbreak control. Authorized reporting is not a breach of confidentiality."},
+{"t": "phcs", "l": "eva", "q": "Which indicator best evaluates the effectiveness of the National Tuberculosis Program in an LGU?", "o": ["Treatment success rate among notified TB cases", "Number of sputum cups purchased by the RHU", "Number of TB posters displayed in barangay health stations", "Number of TB drugs kept in the storeroom"], "a": 0, "e": "Treatment success (cured plus treatment completed) and case notification are key program outcomes. Supplies, posters, and stock are inputs or outputs. Higher-level impact indicators include TB incidence and mortality. RA 10767 requires comprehensive monitoring and evaluation of TB elimination efforts."},
+{"t": "phcs", "l": "eva", "q": "A municipality with limited funds has diarrheal disease as its leading preventable cause of child illness and death. Which investment is likely to have the greatest impact?", "o": ["Improving safe water supply and sanitary toilet coverage, with hygiene promotion", "Buying a CT scanner for the district hospital", "Training all barangay staff in advanced cardiac life support", "Stocking expensive broad-spectrum antibiotics at every barangay health station for all cases"], "a": 0, "e": "Priority setting weighs magnitude, severity, preventability, cost, and feasibility. WASH interventions prevent diarrhea at population level and are primary prevention, while ORS and zinc treat cases. High-cost curative investments help fewer people. Primary Health Care stresses appropriate technology and community-level prevention."},
+{"t": "phcs", "l": "eva", "q": "A patient with type 2 diabetes wants to stop metformin and use only an herbal preparation sold as a \"natural cure.\" What is the best advice?", "o": ["Continue evidence-based treatment; consider herbs only as adjuncts if proven safe and effective", "Stop metformin at once, since natural products are always safer", "Take both at double doses to speed up improvement", "Refuse to discuss traditional medicine at all and end the consultation without giving further advice"], "a": 0, "e": "RA 8423 promotes traditional and alternative medicine that is scientifically validated for safety and efficacy (through PITAHC), not as a replacement for proven therapy. \"Natural\" does not mean safe, effective, or interaction-free. Respectful shared decision-making keeps the patient engaged in care."},
+{"t": "phcs", "l": "cre", "q": "Which community dengue control plan is best designed for a barangay with rising cases?", "o": ["Barangay task force with community search-and-destroy, surveillance, early-consult messaging, referral pathway, and targets", "Weekly fogging of the whole barangay regardless of case data, without any community involvement, clean-up, or case surveillance", "A one-time lecture on dengue at the barangay hall, with no follow-up, targets, or surveillance activities", "Distribution of antibiotics to all residents with fever, while waiting for the rainy season to end"], "a": 0, "e": "A well-designed plan uses surveillance data, organizes a multisectoral task force, mobilizes households for regular source reduction (4S), ensures early consultation and a clear referral pathway for warning signs, uses fogging only for outbreaks, and sets indicators (e.g., container index, case counts, CFR) for monitoring."},
+{"t": "admin", "l": "rem", "q": "In the occupational hierarchy of controls, which measure is the most effective?", "o": ["Elimination of the hazard", "Personal protective equipment", "Administrative controls", "Engineering controls"], "a": 0, "e": "From most to least effective: elimination, then substitution, engineering controls (isolation, ventilation), administrative controls (training, rotation), and personal protective equipment. PPE is primary prevention but the last line of defense. RA 11058 requires employers to implement OSH measures."},
+{"t": "admin", "l": "und", "q": "Why do principles of adult learning (andragogy) improve health education for patients and staff?", "o": ["Adults learn best when content is relevant, problem-centered, and builds on their experience", "Adults learn best through passive memorization of lectures without any discussion or practice", "Adults cannot learn new skills, so education should target only children", "Adults prefer abstract theory unrelated to their immediate problems"], "a": 0, "e": "Adult learners are self-directed, bring experience, and want immediately applicable, problem-centered learning. Participatory methods such as demonstration and return demonstration, case discussion, and teach-back work better than lectures. This underlies patient education and continuing professional training."},
+{"t": "admin", "l": "und", "q": "Why is a signed consent form alone insufficient to prove valid informed consent?", "o": ["Valid consent needs disclosure, comprehension, voluntariness, and decision-making capacity", "A signature is invalid unless it is notarized by a public official", "Only family members can give consent for adult patients in the Philippines, not the patient", "Consent is valid only if the patient pays for the procedure in advance"], "a": 0, "e": "The form documents a process; it is not the consent itself. The patient must receive adequate information (nature, risks, benefits, alternatives), understand it, decide freely without coercion, and have capacity. Teach-back helps confirm understanding. Surrogates decide only when the patient lacks capacity."},
+{"t": "admin", "l": "app", "q": "A man with long-standing type 2 diabetes developed diabetic nephropathy, progressed to end-stage renal disease, and died of cardiac arrest from hyperkalemia. What is the underlying cause of death on the certificate?", "o": ["Type 2 diabetes mellitus", "Cardiorespiratory arrest", "Hyperkalemia", "End-stage renal disease"], "a": 0, "e": "The underlying cause is the disease or injury that started the chain of events leading to death, and it goes on the lowest line of Part I (the immediate cause is on top). \"Cardiorespiratory arrest\" is a mode of dying, not a cause. Under Act 3753, the attending physician certifies the probable cause of death."},
+{"t": "admin", "l": "app", "q": "A patient signs a surgical consent form, but when asked she cannot describe the operation or its risks and says she signed because the nurse told her to. What should the physician do?", "o": ["Re-explain the procedure and confirm understanding before proceeding", "Proceed as scheduled, since the signed form legally proves consent was given", "Cancel the surgery permanently and discharge the patient", "Ask the nurse to sign as a witness and then proceed as planned"], "a": 0, "e": "Without comprehension and voluntariness, consent is not valid even with a signature. The physician should disclose the information again in understandable language, answer questions, use teach-back, and confirm the patient's free decision. A capacitated patient may still refuse."},
+{"t": "admin", "l": "app", "q": "A patient declared brain dead is a potential organ donor. Under RA 7885, what safeguard is required before postmortem organ procurement?", "o": ["Two qualified physicians not involved in the transplant must certify death", "The transplant surgeon alone certifies death to save time", "The family's lawyer must certify the death before any organ retrieval can proceed", "Death is certified by the recipient's attending physician"], "a": 0, "e": "To avoid conflict of interest, death must be diagnosed and certified by physicians independent of the procurement and transplant teams and of the recipient's care. RA 7170 (Organ Donation Act) governs donation, and allocation must follow ethical, clinical criteria rather than wealth or influence."},
+{"t": "admin", "l": "ana", "q": "A capacitated adult refuses a recommended blood transfusion for religious reasons after full explanation of the risks. Which ethical principle should guide the physician?", "o": ["Respect for autonomy: honor the informed refusal, offer acceptable alternatives", "Beneficence overrides her refusal, so transfuse against her will to save her life", "Justice requires transfusion because blood supplies are shared", "Non-maleficence requires discharging her from the hospital"], "a": 0, "e": "A competent adult may refuse treatment, even life-saving treatment, after adequate information. Document the discussion, explore alternatives (e.g., erythropoiesis-stimulating agents, cell salvage), and keep providing care. Beneficence does not justify coercion of a capacitated patient. The situation differs for minors and in emergencies where wishes are unknown."},
+{"t": "admin", "l": "ana", "q": "A patient newly diagnosed with pulmonary TB asks the physician not to report the diagnosis to anyone. Which approach balances ethics and law correctly?", "o": ["Report as legally required while protecting privacy; explain that reporting is confidential", "Keep the diagnosis completely secret from everyone, since patient confidentiality is absolute", "Announce the diagnosis to the patient's employer and neighbors", "Refuse to treat the patient unless they agree to public disclosure"], "a": 0, "e": "Confidentiality is important but not absolute when a specific law requires reporting. RA 11332 mandates reporting of notifiable diseases, and RA 10173 (Data Privacy Act) requires that health data be shared only for lawful purposes with safeguards. Authorized reporting is not unrestricted public disclosure."},
+{"t": "admin", "l": "eva", "q": "Stone-cutting workers are exposed to silica dust. The company proposes giving masks only. Which control plan is most appropriate?", "o": ["Use wet-cutting and local exhaust ventilation, with PPE as supplementary protection", "Provide masks only, since PPE is the most effective control", "Rotate workers more often without changing the process at all", "Offer annual chest X-rays to all workers and continue the same dusty cutting process"], "a": 0, "e": "Apply the hierarchy of controls: eliminate or substitute where possible, then engineering controls (wet methods, enclosure, local exhaust ventilation), then administrative controls, with PPE as the last line. Medical surveillance (spirometry, X-ray) is secondary prevention and does not replace exposure control. RA 11058 requires employers to follow these OSH standards."},
+{"t": "admin", "l": "cre", "q": "Which school health program is best designed for a public elementary school with many underweight, dewormed-irregularly children?", "o": ["Healthy school environment, feeding, micronutrients, deworming, vaccination, health education, screening and referral, indicators", "A single health lecture for parents at the start of the school year, with no screening, feeding, deworming, or follow-up planned or monitored", "Distributing vitamins to teachers only, since they model healthy behavior for the children in their classes", "Referring every child to the city hospital for a full workup, without school-based services or monitoring"], "a": 0, "e": "A comprehensive school health program combines a healthy school environment (WASH, safe food), health services (screening, deworming, immunization, feeding under RA 11037), health education, referral links, and measurable indicators such as nutritional recovery and deworming coverage. One-off or fragmented activities are ineffective."},
+{"t": "researcher", "l": "rem", "q": "Which measure of association is calculated in a case-control study?", "o": ["Odds ratio", "Relative risk", "Incidence rate", "Attributable risk"], "a": 0, "e": "Case-control studies select participants by outcome, so incidence cannot be calculated. The odds ratio (ad/bc) compares the odds of exposure in cases vs controls, and approximates the RR when the disease is rare. Cohort studies and RCTs give incidence, RR, and attributable risk."},
+{"t": "researcher", "l": "rem", "q": "In hypothesis testing, what does statistical power equal?", "o": ["1 − β", "1 − α", "α ÷ β", "β − α"], "a": 0, "e": "Power is the probability of correctly rejecting a false null hypothesis, detecting a real effect: 1 − β, where β is the Type II (false-negative) error. α is the Type I (false-positive) error, often 0.05. Power increases with larger sample size, larger effect size, higher α, and less variability."},
+{"t": "researcher", "l": "und", "q": "With sensitivity and specificity unchanged, why does the positive predictive value of a test increase when disease prevalence rises?", "o": ["More of the positive results are true positives when more people have the disease", "Sensitivity of the test itself rises as disease prevalence increases in the population", "False positives increase faster than true positives at high prevalence", "PPV depends only on specificity and is unaffected by prevalence"], "a": 0, "e": "PPV = TP/(TP + FP). As prevalence rises, true positives increase relative to false positives, so PPV rises and NPV falls. In low-prevalence settings, even good tests produce many false positives. This is why screening high-risk groups gives higher PPV."},
+{"t": "researcher", "l": "und", "q": "What is the main purpose of randomization in a clinical trial, as opposed to random sampling?", "o": ["Randomization balances known and unknown confounders between groups (internal validity)", "Randomization makes the sample representative of the general population", "Randomization eliminates the need for a control or comparison group", "Randomization guarantees that the study result will be statistically significant and valid"], "a": 0, "e": "Random allocation distributes confounders evenly between arms, so outcome differences can be attributed to the intervention (internal validity). Random sampling selects a sample representative of the population (external validity). Allocation concealment and blinding further protect against bias."},
+{"t": "researcher", "l": "und", "q": "What is the difference between the standard deviation (SD) and the standard error of the mean (SE)?", "o": ["SD describes spread of individual values; SE describes precision of the sample mean", "SD and SE are the same value expressed in different units", "SE describes spread of the individual data values; SD describes precision of the sample mean", "SE is always larger than SD in any sample of observations"], "a": 0, "e": "SD measures variability among individual values. SE = SD/√n and measures how precisely the sample mean estimates the population mean, shrinking as the sample grows. Confidence intervals use SE (e.g., mean ± 1.96 SE for 95%)."},
+{"t": "researcher", "l": "und", "q": "A study reports p = 0.03 for a difference between treatments. What does this p-value mean?", "o": ["If there were truly no difference, a result this extreme would occur about 3% of the time", "There is a 3% probability that the null hypothesis of no difference between treatments is true", "There is a 97% probability that the new treatment is better", "The treatment effect is large and clinically important"], "a": 0, "e": "A p-value is the probability of observing data at least as extreme as those found, assuming the null hypothesis is true. It is not the probability that the null is true, and it says nothing about effect size or clinical importance. Confidence intervals convey precision and magnitude."},
+{"t": "researcher", "l": "app", "q": "In a screening study, 100 people have the disease (80 test positive) and 200 do not (180 test negative). What is the sensitivity of the test?", "o": ["80%", "90%", "86.7%", "33.3%"], "a": 0, "e": "Sensitivity = TP/(TP + FN) = 80/100 = 80%. Specificity = TN/(TN + FP) = 180/200 = 90%. PPV = 80/(80 + 20) = 80%. Accuracy = (80 + 180)/300 = 86.7%. Prevalence in the sample = 100/300 = 33.3%."},
+{"t": "researcher", "l": "app", "q": "In a cohort study, 30 of 100 exposed workers and 10 of 100 unexposed workers developed asthma. What is the relative risk?", "o": ["3.0", "0.33", "20%", "3.86"], "a": 0, "e": "RR = incidence in exposed ÷ incidence in unexposed = 0.30/0.10 = 3.0, so exposed workers have three times the risk. The attributable risk (risk difference) is 30% − 10% = 20 percentage points. The odds ratio from the same table would be (30 × 90)/(70 × 10) = 3.86."},
+{"t": "researcher", "l": "app", "q": "A vaccine lowers the risk of hospitalization from 8% to 3%. How many people need to be vaccinated to prevent one hospitalization?", "o": ["20", "5", "12.5", "33"], "a": 0, "e": "ARR = 8% − 3% = 5% = 0.05, and NNT = 1/ARR = 1/0.05 = 20. Always use ARR as a decimal. The relative risk reduction is 0.05/0.08 = 62.5%. The NNT helps compare interventions and communicate benefit."},
+{"t": "researcher", "l": "app", "q": "In a study, 20 new cases of TB occurred among participants contributing a total of 400 person-years of follow-up. What is the incidence rate?", "o": ["5 per 100 person-years", "20 per 100 person-years", "50 per 1,000 persons", "2 per 100 person-years"], "a": 0, "e": "Incidence rate (incidence density) = new cases ÷ total person-time at risk = 20/400 = 0.05 per person-year = 5 per 100 person-years. Person-time accounts for people followed for different durations. Incidence proportion (risk) uses the population at risk at the start as its denominator."},
+{"t": "researcher", "l": "app", "q": "A municipality has 30,000 people aged 0–14, 65,000 aged 15–64, and 5,000 aged 65 and older. What is the total dependency ratio?", "o": ["About 54 per 100 working-age persons", "About 35 per 100 working-age persons", "About 46 per 100 working-age persons", "About 65 per 100 working-age persons"], "a": 0, "e": "Total dependency ratio = (0–14 + 65+) ÷ 15–64 × 100 = (30,000 + 5,000) ÷ 65,000 × 100 ≈ 53.8. The young dependency ratio is 46.2, and the old-age ratio is 7.7. A high young-dependency ratio signals demand for maternal-child and school services."},
+{"t": "researcher", "l": "ana", "q": "Investigators want to study possible risk factors for a very rare childhood cancer. Which study design is most efficient?", "o": ["Case-control study", "Prospective cohort study", "Cross-sectional survey", "Randomized controlled trial"], "a": 0, "e": "For rare diseases, a case-control study starts with cases and compares past exposures with controls, which is efficient in time and cost and yields an odds ratio. Cohort studies suit rare exposures and give incidence and RR. RCTs test interventions and would be unethical for harmful exposures. Cross-sectional studies measure prevalence."},
+{"t": "researcher", "l": "ana", "q": "A study finds that coffee drinkers have more pancreatic cancer, but coffee drinkers in the sample are also much more likely to smoke. Smoking independently causes pancreatic cancer. What is the most likely explanation?", "o": ["Confounding by smoking", "Recall bias of cases", "Selection bias by design", "Effect modification"], "a": 0, "e": "A confounder is associated with the exposure, independently causes the outcome, and is not on the causal pathway. Smoking can create a spurious association between coffee and cancer. It is controlled by restriction, matching, stratification, or multivariable adjustment, and by randomization in trials."},
+{"t": "researcher", "l": "ana", "q": "A municipal population pyramid has a very broad base that narrows rapidly toward the top. What does this imply for health services?", "o": ["Expansive (young) population: high demand for MCH, immunization, and school health", "Constrictive (aging) population: high demand for geriatric, long-term, and NCD care services", "Stationary population: stable demand with little change in age structure", "Population structure has no bearing on health service planning"], "a": 0, "e": "An expansive pyramid reflects high fertility and a young population (typical of developing areas), requiring maternal-child health, family planning, immunization, and adolescent services. A constrictive pyramid (narrow base, larger older population) signals aging, NCDs, and rehabilitation needs."},
+{"t": "researcher", "l": "ana", "q": "An ecologic study finds that provinces with higher average income have lower TB rates. A researcher concludes that any individual with higher income has lower TB risk. What error is this?", "o": ["Ecologic fallacy", "Lead-time bias", "Recall bias", "Type II (beta) error"], "a": 0, "e": "Ecologic studies use group-level data. Applying group associations to individuals is the ecologic fallacy, because the relationship may not hold for individuals. Such studies generate hypotheses and assess population-level patterns, and individual-level designs (cohort, case-control) are needed to confirm them."},
+{"t": "researcher", "l": "ana", "q": "In a case-control study, mothers of infants with birth defects report more medication use during pregnancy than mothers of healthy infants, partly because they searched their memories more thoroughly. What bias is this?", "o": ["Recall bias (information bias)", "Confounding by indication", "Lead-time bias in cancer screening", "Loss to follow-up bias"], "a": 0, "e": "Recall bias is differential misclassification of exposure: cases remember or report past exposures differently from controls. It is an information bias common in case-control studies. It can be reduced by using records (e.g., prescription data), blinding interviewers, and structured questionnaires."},
+{"t": "researcher", "l": "eva", "q": "A physician wants the strongest evidence on whether a drug reduces mortality. Which source should guide the decision?", "o": ["A systematic review and meta-analysis of well-conducted RCTs", "A single expert's opinion shared at a conference", "A case series of 20 patients from one hospital", "A cross-sectional survey of patient preferences and satisfaction"], "a": 0, "e": "For therapy questions, systematic reviews of RCTs sit at the top of the evidence hierarchy, followed by individual RCTs, cohort studies, case-control studies, case series, and expert opinion. Evidence must still be appraised for bias, heterogeneity, applicability, and patient values (Ask, Acquire, Appraise, Apply, Assess)."},
+{"t": "researcher", "l": "eva", "q": "A trial of 50,000 patients finds that a new drug lowers systolic BP by 1 mmHg more than placebo (p < 0.001). How should this be evaluated?", "o": ["Statistically significant, but likely too small an effect to be clinically meaningful", "Clinically important, since any p-value below 0.05 indicates a large and meaningful benefit", "Not significant, because a 1 mmHg difference cannot reach p < 0.001", "Invalid, because large trials always produce false-positive results"], "a": 0, "e": "Very large samples can make trivial differences statistically significant. Judge clinical significance by effect size, confidence interval, absolute benefit (NNT), cost, harms, and patient values. Statistical significance does not equal clinical or public-health significance."},
+{"t": "researcher", "l": "eva", "q": "Using Donabedian's framework, which is an outcome measure of quality in a hypertension clinic?", "o": ["Proportion of patients with blood pressure controlled to target", "Number of sphygmomanometers available in the clinic", "Proportion of patients whose blood pressure was measured at each visit", "Number of nurses trained in BP measurement this year"], "a": 0, "e": "Donabedian: structure (resources, e.g., equipment and staff), process (what is done, e.g., BP measured), and outcome (the effect on health, e.g., BP control, strokes prevented). QA checks performance against standards, while QI (e.g., PDSA cycles: Plan, Do, Study, Act) continuously improves the system."},
+{"t": "researcher", "l": "cre", "q": "Which is the best-formulated research question (PICO) for evaluating a community intervention?", "o": ["Among hypertensive adults in Barangay X (P), does weekly BHW home monitoring (I) vs usual care (C) improve BP control at 6 months (O)?", "Is hypertension a big problem in the Philippines, and what do Filipinos generally think about it, its many causes, and its usual treatment?", "Do health workers like home visits better than clinic visits, and should the DOH fund them in the future?", "What is the best medicine for everyone with any cardiovascular disease in every setting across the world?"], "a": 0, "e": "A focused, answerable question specifies the Population, Intervention, Comparator, and Outcome (with time frame). This guides the study design (here an RCT or quasi-experimental study), sample size, and measurement. Vague or overly broad questions cannot be tested. Proposals also need ethics review (PHREB, RA 10532) and data privacy safeguards (RA 10173)."},
+{"t": "social", "l": "rem", "q": "Which law is the current principal legal framework for disaster risk reduction and management in the Philippines?", "o": ["RA 10121, Philippine DRRM Act of 2010", "PD 1566, Disaster Control Decree of 1978", "RA 7160, Local Government Code of 1991", "RA 11332, Mandatory Reporting Act of 2019"], "a": 0, "e": "RA 10121 created the NDRRMC and local DRRM councils and offices, adopting an all-hazards, community-based, multisectoral approach across four thematic areas. It superseded PD 1566 as the main framework. LGUs must allocate at least 5% of estimated regular revenue to the LDRRM Fund."},
+{"t": "social", "l": "und", "q": "How does social mobilization differ from IEC (information, education, communication)?", "o": ["Mobilization organizes broad multisectoral collective action; IEC mainly delivers messages", "Mobilization means distributing posters and leaflets to households", "IEC includes policy advocacy and resource mobilization, but social mobilization does not include them", "They are identical activities with different names in DOH programs"], "a": 0, "e": "IEC transmits information. Social mobilization brings together leaders, sectors, organizations, and communities to take coordinated action and commit resources toward a goal. Posters alone are not mobilization, and awareness does not equal behavior change. Advocacy targets policymakers and resources."},
+{"t": "social", "l": "und", "q": "Why is genuine community participation and ownership essential for sustaining a health program?", "o": ["Programs designed and run with the community fit local needs and outlast outside support", "Community participation is only needed to satisfy donor reporting requirements", "Participation slows programs down and should be avoided when possible", "Ownership belongs to the health department, so communities need not be involved in planning"], "a": 0, "e": "When communities help identify problems, set priorities, design interventions, and manage resources, programs become relevant, accepted, and self-sustaining, with capacity transferred locally. Deciding first and informing later is not true participation. This is a core principle of Primary Health Care."},
+{"t": "social", "l": "app", "q": "Before typhoon season, a municipal health office conducts evacuation drills, prepositions medicines, and updates contingency plans. Which DRRM thematic area does this represent?", "o": ["Preparedness", "Response", "Rehabilitation and recovery", "Prevention and mitigation"], "a": 0, "e": "Preparedness covers drills, early warning, contingency planning, and stockpiling before an event. Prevention and mitigation reduce the hazard or vulnerability (zoning, retrofitting). Response includes rescue, triage, and relief during and immediately after. Rehabilitation and recovery restore services and \"build back better.\""},
+{"t": "social", "l": "app", "q": "Under RA 10121, what share of the Local DRRM Fund is set aside as the Quick Response Fund for relief and recovery?", "o": ["30%", "5%", "50%", "70%"], "a": 0, "e": "LGUs must set aside at least 5% of estimated revenue from regular sources as the LDRRMF. Of this, 30% is the Quick Response Fund for immediate relief and recovery, and the rest supports prevention, mitigation, and preparedness activities."},
+{"t": "social", "l": "app", "q": "A formula-milk company offers free samples and gifts to mothers visiting a health center to promote its products. Which issuance does this violate?", "o": ["EO 51 (Milk Code)", "RA 9211 (Tobacco Regulation Act)", "RA 8423 (TAMA)", "RA 9003 (Solid Waste Act)"], "a": 0, "e": "EO 51 (1986) regulates the marketing of breastmilk substitutes and bans promotional practices such as free samples and gifts to mothers in health facilities, to protect breastfeeding. Exclusive breastfeeding for 6 months is part of the First 1,000 Days strategy (RA 11148)."},
+{"t": "social", "l": "ana", "q": "The municipal council designs a sanitation program, then calls a barangay assembly only to announce it and assign tasks. Residents show little interest. What is the most likely reason?", "o": ["The community was informed, not engaged; top-down planning lowers participation and ownership", "Residents do not care about sanitation because it is not considered a health issue in barangays", "The program failed because it lacked enough posters and flyers", "Barangay assemblies are illegal venues for health programs"], "a": 0, "e": "Real community engagement involves people in assessing problems, setting priorities, and co-designing solutions. Top-down decisions announced afterward produce low ownership and poor sustainability. \"Attendance ≠ ownership\" and \"government deciding first and informing later ≠ participation\" are board traps."},
+{"t": "social", "l": "ana", "q": "After a typhoon destroys a hospital, it is rebuilt on higher ground with flood-resistant design. How is this best classified?", "o": ["Rehabilitation/recovery that also mitigates future risk (\"build back better\")", "Response phase, since it happens soon after the disaster", "Preparedness, since it involves drills, stockpiling, and early warning systems", "Tertiary prevention of individual patients' disabilities"], "a": 0, "e": "Reconstruction occurs during rehabilitation and recovery, and building a safer, resilient facility reduces future risk, which is mitigation (primordial or primary prevention at the system level). DOH's Handa sa Krisis agenda targets safe, green, climate-resilient hospitals."},
+{"t": "social", "l": "eva", "q": "A newly assigned municipal health officer wants to mobilize a remote community for a maternal health program. What should be done first?", "o": ["Community entry: build trust with leaders and residents and map stakeholders", "Immediately launch the program with DOH-designed materials", "Issue an executive order requiring all pregnant women to attend", "Hire outside consultants to decide the health priorities for the community on its behalf"], "a": 0, "e": "Social mobilization starts with community entry and building trust, followed by stakeholder mapping, participatory assessment, joint priority setting, co-design, organizing, implementation, two-way communication, monitoring, and transfer of ownership. Skipping these steps undermines acceptance."},
+{"t": "social", "l": "cre", "q": "Which mobilization plan is best designed to raise cervical cancer screening uptake among women in a municipality?", "o": ["Plan co-designed with women's groups, trained BHWs, accessible VIA/HPV screening days, a treatment and referral pathway, and tracked indicators", "A single radio announcement asking women to get screened, with no service schedule, referral pathway, community consultation, or follow-up of results", "Posters placed in the town hall, relying on women to find a private clinic on their own and to pay for testing themselves", "An ordinance fining women who are not screened, without providing any screening services or community consultation"], "a": 0, "e": "Effective mobilization engages stakeholders, addresses barriers (access, cost, fear, stigma), ensures a functioning service and treatment pathway (mobilization without services breeds frustration), uses two-way communication, and monitors indicators such as screening coverage and completion of treatment for screen positives. Coercion undermines trust."}
+];
 
-const pqRegionGrid = document.getElementById('pq-region-grid');
-PQ_REGIONS.forEach(r=>{
-  const chip = document.createElement('div');
-  chip.className = 'pq-chip on';
-  chip.dataset.id = r.id;
-  chip.innerHTML = `<span class="pq-box">✓</span><span class="pq-num">${r.num}</span><span>${r.label}</span>`;
-  chip.addEventListener('click', ()=>{
-    if(pqSelectedRegions.has(r.id)){
-      pqSelectedRegions.delete(r.id);
-      chip.classList.remove('on');
-      chip.querySelector('.pq-box').textContent='';
-    } else {
-      pqSelectedRegions.add(r.id);
-      chip.classList.add('on');
-      chip.querySelector('.pq-box').textContent='✓';
-    }
-  });
-  pqRegionGrid.appendChild(chip);
-});
 
-document.getElementById('pq-select-all').addEventListener('click', ()=>{
-  pqSelectedRegions = new Set(PQ_REGIONS.map(r=>r.id));
-  document.querySelectorAll('#pq-region-grid .pq-chip').forEach(c=>{
-    c.classList.add('on'); c.querySelector('.pq-box').textContent='✓';
-  });
-});
-document.getElementById('pq-select-none').addEventListener('click', ()=>{
-  pqSelectedRegions = new Set();
-  document.querySelectorAll('#pq-region-grid .pq-chip').forEach(c=>{
-    c.classList.remove('on'); c.querySelector('.pq-box').textContent='';
-  });
-});
+/* ============================================================
+   QUIZ MODE: logic
+   ============================================================ */
+(function(){
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const TOPIC = Object.fromEntries(QZ_TOPICS.map(t=>[t.id,t]));
+const LEVEL = Object.fromEntries(QZ_LEVELS.map(l=>[l.id,l]));
+const LEVEL_ORDER = QZ_LEVELS.map(l=>l.id);
+const TOPIC_ORDER = QZ_TOPICS.map(t=>t.id);
 
-const PQ_COUNT_OPTIONS = [10, 20, 30, 'all'];
-const pqCountRow = document.getElementById('pq-count-row');
-PQ_COUNT_OPTIONS.forEach(opt=>{
-  const btn = document.createElement('button');
-  btn.className = 'pq-count-btn' + (opt===10 ? ' on' : '');
-  btn.textContent = opt==='all' ? 'All available' : opt + ' questions';
-  btn.addEventListener('click', ()=>{
-    pqCount = opt;
-    document.querySelectorAll('#pq-count-row .pq-count-btn').forEach(b=>b.classList.remove('on'));
-    btn.classList.add('on');
-  });
-  pqCountRow.appendChild(btn);
-});
+let selTopics = new Set(TOPIC_ORDER);
+let selLevels = new Set(LEVEL_ORDER);
+let topicLevels = {};           // per-topic tab level selection
+QZ_TOPICS.forEach(t=> topicLevels[t.id] = new Set(LEVEL_ORDER));
+let count = 20;
+let activeSetupTab = 'all';
+let questions = [], idx = 0, score = 0, answers = [];
 
-function pqShuffle(arr){
-  const a = arr.slice();
-  for(let i=a.length-1;i>0;i--){
-    const j = Math.floor(Math.random()*(i+1));
-    [a[i],a[j]]=[a[j],a[i]];
-  }
-  return a;
+function shuffle(arr){ const a=arr.slice(); for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]];} return a; }
+function countOf(t,l){ return QZ_QUESTIONS.filter(q=>(!t||q.t===t)&&(!l||q.l===l)).length; }
+function sortByTOS(list){ return list.slice().sort((a,b)=> TOPIC_ORDER.indexOf(a.t)-TOPIC_ORDER.indexOf(b.t) || LEVEL_ORDER.indexOf(a.l)-LEVEL_ORDER.indexOf(b.l)); }
+
+/* ---------- setup tabs ---------- */
+function buildTabs(wrap, items, active, onPick){
+  wrap.innerHTML='';
+  items.forEach(it=>{
+    const b=document.createElement('button');
+    b.className='qz-tab'+(it.region?' '+it.region:'')+(it.id===active?' on':'');
+    b.innerHTML=(it.num?`<span class="qz-tab-num">${it.num}</span>`:'')+`<span>${esc(it.label)}</span>`+(it.extra?`<span class="qz-tab-score">${it.extra}</span>`:'');
+    b.addEventListener('click',()=>onPick(it.id));
+    wrap.appendChild(b);
+  });
+}
+function renderSetupTabs(){
+  const items=[{id:'all', label:'All topics', num:'✦'}].concat(QZ_TOPICS.map(t=>({id:t.id,label:t.label,num:t.num,region:'region-'+t.id})));
+  buildTabs($('qz-setup-tabs'), items, activeSetupTab, id=>{ activeSetupTab=id; renderSetupTabs(); renderSetupPanel(); });
+}
+function renderSetupPanel(){
+  const all = activeSetupTab==='all';
+  $('qz-panel-all').classList.toggle('qz-hidden', !all);
+  $('qz-panel-topic').classList.toggle('qz-hidden', all);
+  if(all){ updatePoolNote(); return; }
+  const t=TOPIC[activeSetupTab], sel=topicLevels[t.id];
+  const panel=$('qz-panel-topic');
+  panel.className='region-'+t.id;
+  const rows = QZ_LEVELS.filter(l=>countOf(t.id,l.id)>0).map(l=>{
+    const n=countOf(t.id,l.id); const on=sel.has(l.id);
+    return `<div class="qz-level-row${on?' on':''}" data-lv="${l.id}"><span class="qz-box">${on?'✓':''}</span>
+      <span class="qz-level-name"><span class="qz-lv-badge qz-lv-${l.id}">${l.label}</span></span>
+      <span class="qz-level-desc">${esc(l.desc)}</span><span class="qz-level-count">${n} item${n>1?'s':''}</span></div>`;
+  }).join('');
+  const bp = `<table class="qz-blueprint"><tr><th>TOS blueprint</th><th>Weight</th>${QZ_LEVELS.map(l=>`<th>${l.short}</th>`).join('')}<th>Total</th></tr>
+    <tr><td>${esc(t.label)}</td><td>${t.weight}</td>${QZ_LEVELS.map(l=>{const c=countOf(t.id,l.id);return `<td>${c||'–'}</td>`;}).join('')}<td><strong>${countOf(t.id)}</strong></td></tr></table>`;
+  const n = QZ_QUESTIONS.filter(q=>q.t===t.id && sel.has(q.l)).length;
+  panel.innerHTML = `
+    <div class="qz-card">
+      <div class="qz-panel-head"><div class="qz-roman">${t.num}</div><div><h3>${esc(t.label)}</h3><div class="qz-scope"><strong>TOS content:</strong> ${esc(t.scope)}</div></div></div>
+      ${bp}
+    </div>
+    <div class="qz-card">
+      <h3 class="block-title">Questions by cognitive level</h3>
+      <div class="qz-level-list">${rows}</div>
+      <div class="qz-actions"><button class="qz-link-btn" data-act="all">Select all levels</button><button class="qz-link-btn" data-act="none">Clear all</button></div>
+      <div class="qz-warn qz-hidden" id="qz-topic-warn">Pick at least one level.</div>
+      <button class="qz-start-btn" id="qz-topic-start">Start ${esc(t.label)} quiz (${n} question${n===1?'':'s'})</button>
+    </div>`;
+  panel.querySelectorAll('.qz-level-row').forEach(r=>r.addEventListener('click',()=>{
+    const lv=r.dataset.lv; sel.has(lv)?sel.delete(lv):sel.add(lv); renderSetupPanel();
+  }));
+  panel.querySelector('[data-act="all"]').addEventListener('click',()=>{ topicLevels[t.id]=new Set(LEVEL_ORDER); renderSetupPanel(); });
+  panel.querySelector('[data-act="none"]').addEventListener('click',()=>{ topicLevels[t.id]=new Set(); renderSetupPanel(); });
+  $('qz-topic-start').addEventListener('click',()=>{
+    const pool=QZ_QUESTIONS.filter(q=>q.t===t.id && topicLevels[t.id].has(q.l));
+    if(!pool.length){ $('qz-topic-warn').classList.remove('qz-hidden'); return; }
+    questions=shuffle(pool); begin();
+  });
 }
 
-document.getElementById('pq-start-btn').addEventListener('click', ()=>{
-  if(pqSelectedRegions.size===0){
-    document.getElementById('pq-setup-warn').classList.remove('pq-hidden');
+/* ---------- all-topics chips ---------- */
+function makeChip(wrap, set, id, num, label, cnt){
+  const chip=document.createElement('div');
+  chip.className='qz-chip'+(set().has(id)?' on':''); chip.dataset.id=id;
+  chip.innerHTML=`<span class="qz-box">${set().has(id)?'✓':''}</span>${num?`<span class="qz-num">${num}</span>`:''}<span>${label}</span><span class="qz-cnt">${cnt}</span>`;
+  chip.addEventListener('click',()=>{ const s=set(); s.has(id)?s.delete(id):s.add(id); syncChips(); });
+  wrap.appendChild(chip);
+}
+function syncChips(){
+  document.querySelectorAll('#qz-topic-grid .qz-chip').forEach(c=>{ const on=selTopics.has(c.dataset.id); c.classList.toggle('on',on); c.querySelector('.qz-box').textContent=on?'✓':''; });
+  document.querySelectorAll('#qz-level-grid .qz-chip').forEach(c=>{ const on=selLevels.has(c.dataset.id); c.classList.toggle('on',on); c.querySelector('.qz-box').textContent=on?'✓':''; });
+  updatePoolNote();
+}
+QZ_TOPICS.forEach(t=>makeChip($('qz-topic-grid'), ()=>selTopics, t.id, t.num, esc(t.label), countOf(t.id)+' · '+t.weight));
+QZ_LEVELS.forEach(l=>makeChip($('qz-level-grid'), ()=>selLevels, l.id, '', `<span class="qz-lv-badge qz-lv-${l.id}">${l.label}</span>`, countOf(null,l.id)));
+$('qz-topic-all').addEventListener('click',()=>{ selTopics=new Set(TOPIC_ORDER); syncChips(); });
+$('qz-topic-none').addEventListener('click',()=>{ selTopics=new Set(); syncChips(); });
+$('qz-level-all').addEventListener('click',()=>{ selLevels=new Set(LEVEL_ORDER); syncChips(); });
+$('qz-level-none').addEventListener('click',()=>{ selLevels=new Set(); syncChips(); });
+
+[10,20,30,'all'].forEach(opt=>{
+  const b=document.createElement('button');
+  b.className='qz-count-btn'+(opt===count?' on':'');
+  b.textContent= opt==='all' ? 'All matching' : opt+' questions';
+  b.addEventListener('click',()=>{ count=opt; document.querySelectorAll('#qz-count-row .qz-count-btn').forEach(x=>x.classList.remove('on')); b.classList.add('on'); updatePoolNote(); });
+  $('qz-count-row').appendChild(b);
+});
+function currentPool(){ return QZ_QUESTIONS.filter(q=>selTopics.has(q.t)&&selLevels.has(q.l)); }
+function updatePoolNote(){
+  const n=currentPool().length;
+  const take = count==='all' ? n : Math.min(count,n);
+  $('qz-pool-note').textContent = `${n} question${n===1?'':'s'} match your filters. This quiz will use ${take}.`;
+}
+/* Draw a quiz that keeps the TOS proportions as closely as possible */
+function stratifiedDraw(pool, n){
+  if(n>=pool.length) return shuffle(pool);
+  const groups={}; shuffle(pool).forEach(q=>{ const k=q.t+'|'+q.l; (groups[k]=groups[k]||[]).push(q); });
+  const keys=Object.keys(groups);
+  const quota={}; let used=0;
+  const rema=keys.map(k=>{ const exact=groups[k].length/pool.length*n; quota[k]=Math.floor(exact); used+=quota[k]; return [k, exact-quota[k]]; });
+  shuffle(rema).sort((a,b)=>b[1]-a[1]).slice(0, n-used).forEach(([k])=>quota[k]++);
+  let out=[]; keys.forEach(k=>{ out=out.concat(groups[k].slice(0,quota[k])); });
+  return shuffle(out);
+}
+$('qz-start-btn').addEventListener('click',()=>{
+  const pool=currentPool();
+  if(!pool.length){ $('qz-setup-warn').classList.remove('qz-hidden'); return; }
+  $('qz-setup-warn').classList.add('qz-hidden');
+  questions = count==='all' ? shuffle(pool) : stratifiedDraw(pool, count);
+  begin();
+});
+$('qz-full-btn').addEventListener('click',()=>{ questions=shuffle(QZ_QUESTIONS); begin(); });
+
+/* ---------- quiz screen ---------- */
+function scrollTop(){ const m=$('mainContent'); if(m&&m.scrollTo) m.scrollTo({top:0,behavior:'instant'}); window.scrollTo({top:0,behavior:'instant'}); }
+function begin(){
+  idx=0; score=0; answers=[];
+  $('qz-setup-screen').classList.add('qz-hidden');
+  $('qz-results-screen').classList.add('qz-hidden');
+  $('qz-quiz-screen').classList.remove('qz-hidden');
+  render(); scrollTop();
+}
+function render(){
+  const item=questions[idx], t=TOPIC[item.t], l=LEVEL[item.l];
+  $('qz-q-counter').textContent=`Question ${idx+1} of ${questions.length}`;
+  $('qz-q-score').textContent=`Score: ${score}`;
+  $('qz-progress-fill').style.width=(idx/questions.length*100)+'%';
+  $('qz-q-card').className='qz-card region-'+item.t;
+  $('qz-q-topic').textContent=`${t.num} · ${t.label}`;
+  const lv=$('qz-q-level'); lv.className='qz-lv-badge qz-lv-'+item.l; lv.textContent=l.label;
+  $('qz-q-text').textContent=item.q;
+  const letters=['A','B','C','D'];
+  const opts=shuffle(item.o.map((text,i)=>({text,isCorrect:i===item.a})));
+  const wrap=$('qz-q-options'); wrap.innerHTML='';
+  opts.forEach((opt,i)=>{
+    const b=document.createElement('button'); b.className='qz-option';
+    b.innerHTML=`<span class="qz-letter">${letters[i]}</span><span>${esc(opt.text)}</span>`;
+    b.addEventListener('click',()=>choose(b,opt,opts,item));
+    wrap.appendChild(b);
+  });
+  $('qz-q-explain').classList.add('qz-hidden');
+  $('qz-next-btn').classList.add('qz-hidden');
+}
+function choose(btn,opt,opts,item){
+  const btns=document.querySelectorAll('#qz-q-options .qz-option');
+  if([...btns].some(b=>b.classList.contains('qz-locked'))) return;
+  btns.forEach((b,i)=>{ b.classList.add('qz-locked'); if(opts[i].isCorrect) b.classList.add('qz-correct'); else if(b===btn) b.classList.add('qz-incorrect'); else b.classList.add('qz-dim'); });
+  const ok=opt.isCorrect; if(ok) score++;
+  answers.push({item, chosen:opt.text, ok});
+  $('qz-q-score').textContent=`Score: ${score}`;
+  const ex=$('qz-q-explain'); ex.classList.remove('qz-hidden'); ex.classList.toggle('qz-wrong',!ok);
+  $('qz-q-verdict').textContent= ok ? 'Correct.' : 'Not quite. Correct answer: '+item.o[item.a];
+  $('qz-q-explain-text').textContent=item.e;
+  const nb=$('qz-next-btn'); nb.textContent= idx===questions.length-1 ? 'See results' : 'Next question'; nb.classList.remove('qz-hidden');
+}
+$('qz-next-btn').addEventListener('click',()=>{ idx++; if(idx>=questions.length) showResults(); else { render(); scrollTop(); } });
+$('qz-quit-btn').addEventListener('click',()=>{ if(answers.length) showResults(); else { $('qz-quiz-screen').classList.add('qz-hidden'); $('qz-setup-screen').classList.remove('qz-hidden'); } });
+
+/* ---------- results: tabs by major topic, questions grouped by level ---------- */
+let activeResultTab='overview';
+function tally(list){ return {c:list.filter(a=>a.ok).length, n:list.length}; }
+function bar(name, c, n, region){
+  const pct=n?Math.round(c/n*100):0;
+  return `<div class="qz-bar-row${region?' '+region:''}"><span class="qz-bar-name">${name}</span><span class="qz-bar-track"><span class="qz-bar-fill" style="width:${pct}%"></span></span><span class="qz-bar-score">${c}/${n}</span></div>`;
+}
+function showResults(){
+  $('qz-quiz-screen').classList.add('qz-hidden');
+  $('qz-results-screen').classList.remove('qz-hidden');
+  const n=answers.length;
+  $('qz-final-score').textContent=`${score}/${n}`;
+  $('qz-final-pct').textContent=`${n?Math.round(score/n*100):0}% correct` + (n<questions.length?` · ended early (${n} of ${questions.length} answered)`:'');
+  activeResultTab='overview';
+  renderResultTabs(); renderResultPanel();
+  $('qz-retry-missed-btn').classList.toggle('qz-hidden', !answers.some(a=>!a.ok));
+  scrollTop();
+}
+function renderResultTabs(){
+  const items=[{id:'overview',label:'Overview',num:'✦'}];
+  QZ_TOPICS.forEach(t=>{ const list=answers.filter(a=>a.item.t===t.id); if(list.length){ const s=tally(list); items.push({id:t.id,label:t.label,num:t.num,region:'region-'+t.id,extra:`${s.c}/${s.n}`}); } });
+  buildTabs($('qz-result-tabs'), items, activeResultTab, id=>{ activeResultTab=id; renderResultTabs(); renderResultPanel(); });
+}
+function renderResultPanel(){
+  const panel=$('qz-result-panel');
+  if(activeResultTab==='overview'){
+    const topicBars=QZ_TOPICS.map(t=>{ const s=tally(answers.filter(a=>a.item.t===t.id)); return s.n?bar(`${t.num} · ${esc(t.label)}`, s.c, s.n, 'region-'+t.id):''; }).join('');
+    const levelBars=QZ_LEVELS.map(l=>{ const s=tally(answers.filter(a=>a.item.l===l.id)); return s.n?bar(l.label, s.c, s.n):''; }).join('');
+    panel.className='';
+    panel.innerHTML=`<div class="qz-card"><h3 class="block-title">By topic</h3><div class="qz-bars">${topicBars}</div></div>
+      <div class="qz-card"><h3 class="block-title">By cognitive level</h3><div class="qz-bars">${levelBars}</div></div>
+      <p class="qz-intro" style="margin-bottom:18px;">Open a topic tab above to review every question you answered in that topic, grouped by level, with explanations.</p>`;
     return;
   }
-  document.getElementById('pq-setup-warn').classList.add('pq-hidden');
-  const pool = PQ_QUESTIONS.filter(q=>pqSelectedRegions.has(q.cat));
-  const shuffled = pqShuffle(pool);
-  pqQuestions = pqCount==='all' ? shuffled : shuffled.slice(0, Math.min(pqCount, shuffled.length));
-  pqBegin();
-});
-
-function pqBegin(){
-  pqIndex = 0;
-  pqScore = 0;
-  pqAnswers = [];
-  document.getElementById('pq-setup-screen').classList.add('pq-hidden');
-  document.getElementById('pq-results-screen').classList.add('pq-hidden');
-  document.getElementById('pq-quiz-screen').classList.remove('pq-hidden');
-  pqRenderQuestion();
+  const t=TOPIC[activeResultTab];
+  const list=answers.filter(a=>a.item.t===t.id);
+  const s=tally(list);
+  panel.className='region-'+t.id;
+  const sections=QZ_LEVELS.map(l=>{
+    const lv=list.filter(a=>a.item.l===l.id); if(!lv.length) return '';
+    const ls=tally(lv);
+    const items=lv.map(a=>`<div class="qz-item ${a.ok?'ok':'bad'}">
+        <div class="qz-item-q"><span class="qz-mark">${a.ok?'✓':'✗'}</span>${esc(a.item.q)}</div>
+        ${a.ok?'':`<div class="qz-item-you">Your answer: ${esc(a.chosen)}</div>`}
+        <div class="qz-item-correct">Correct answer: ${esc(a.item.o[a.item.a])}</div>
+        <div class="qz-item-exp">${esc(a.item.e)}</div></div>`).join('');
+    return `<div class="qz-lv-section"><div class="qz-lv-head"><span class="qz-lv-badge qz-lv-${l.id}">${l.label}</span><span class="qz-scope">${esc(l.desc)}</span><span class="qz-lv-score">${ls.c}/${ls.n}</span></div>${items}</div>`;
+  }).join('');
+  panel.innerHTML=`<div class="qz-card">
+      <div class="qz-panel-head"><div class="qz-roman">${t.num}</div><div><h3>${esc(t.label)}: ${s.c}/${s.n}</h3><div class="qz-scope">${esc(t.scope)}</div></div></div>
+      <div class="qz-filter-row"><label><input type="checkbox" id="qz-only-missed"> Show missed only</label></div>
+      <div id="qz-lv-wrap">${sections}</div></div>`;
+  $('qz-only-missed').addEventListener('change',e=>{
+    panel.querySelectorAll('.qz-item.ok').forEach(el=>el.classList.toggle('qz-hidden', e.target.checked));
+    panel.querySelectorAll('.qz-lv-section').forEach(sec=>sec.classList.toggle('qz-hidden', e.target.checked && !sec.querySelector('.qz-item.bad')));
+  });
 }
+$('qz-retry-missed-btn').addEventListener('click',()=>{ questions=shuffle(answers.filter(a=>!a.ok).map(a=>a.item)); begin(); });
+$('qz-restart-btn').addEventListener('click',()=>{ $('qz-results-screen').classList.add('qz-hidden'); $('qz-setup-screen').classList.remove('qz-hidden'); renderSetupTabs(); renderSetupPanel(); scrollTop(); });
 
-function pqRenderQuestion(){
-  const item = pqQuestions[pqIndex];
-  document.getElementById('pq-q-counter').textContent = `Question ${pqIndex+1} of ${pqQuestions.length}`;
-  document.getElementById('pq-q-score').textContent = `Score: ${pqScore}`;
-  document.getElementById('pq-progress-fill').style.width = (pqIndex/pqQuestions.length*100) + '%';
-  document.getElementById('pq-q-region-tag').textContent = PQ_REGION_LABEL[item.cat];
-  document.getElementById('pq-q-text').textContent = item.q;
+renderSetupTabs(); renderSetupPanel();
+})();
 
-  const letters = ['A','B','C','D'];
-  const optionObjs = item.options.map((text,i)=>({text, isCorrect:i===item.correct}));
-  const shuffledOpts = pqShuffle(optionObjs);
-
-  const optsWrap = document.getElementById('pq-q-options');
-  optsWrap.innerHTML = '';
-  shuffledOpts.forEach((opt,i)=>{
-    const btn = document.createElement('button');
-    btn.className = 'pq-option';
-    btn.innerHTML = `<span class="pq-letter">${letters[i]}</span><span>${opt.text}</span>`;
-    btn.addEventListener('click', ()=>pqSelectOption(btn, opt, shuffledOpts, item));
-    optsWrap.appendChild(btn);
-  });
-
-  document.getElementById('pq-q-explain').classList.add('pq-hidden');
-  document.getElementById('pq-next-btn').classList.add('pq-hidden');
-}
-
-function pqSelectOption(btn, opt, allOpts, item){
-  const allBtns = document.querySelectorAll('#pq-q-options .pq-option');
-  if([...allBtns].some(b=>b.classList.contains('pq-locked'))) return;
-
-  allBtns.forEach((b, idx)=>{
-    b.classList.add('pq-locked');
-    const correspondingOpt = allOpts[idx];
-    if(correspondingOpt.isCorrect){
-      b.classList.add('pq-correct');
-    } else if(b===btn){
-      b.classList.add('pq-incorrect');
-    } else {
-      b.classList.add('pq-dim');
-    }
-  });
-
-  const wasCorrect = opt.isCorrect;
-  if(wasCorrect) pqScore++;
-
-  pqAnswers.push({
-    q: item.q,
-    region: item.cat,
-    chosen: opt.text,
-    correctText: item.options[item.correct],
-    wasCorrect,
-    exp: item.exp
-  });
-
-  document.getElementById('pq-q-score').textContent = `Score: ${pqScore}`;
-  const explain = document.getElementById('pq-q-explain');
-  const verdict = document.getElementById('pq-q-verdict');
-  explain.classList.remove('pq-hidden');
-  if(wasCorrect){
-    explain.classList.remove('pq-wrong');
-    verdict.textContent = 'Correct.';
-  } else {
-    explain.classList.add('pq-wrong');
-    verdict.textContent = 'Not quite.';
-  }
-  document.getElementById('pq-q-explain-text').textContent = item.exp;
-
-  const nextBtn = document.getElementById('pq-next-btn');
-  nextBtn.textContent = (pqIndex === pqQuestions.length-1) ? 'See results' : 'Next question';
-  nextBtn.classList.remove('pq-hidden');
-}
-
-document.getElementById('pq-next-btn').addEventListener('click', ()=>{
-  pqIndex++;
-  if(pqIndex >= pqQuestions.length){
-    pqShowResults();
-  } else {
-    pqRenderQuestion();
-  }
-});
-
-function pqShowResults(){
-  document.getElementById('pq-quiz-screen').classList.add('pq-hidden');
-  document.getElementById('pq-results-screen').classList.remove('pq-hidden');
-
-  const total = pqQuestions.length;
-  document.getElementById('pq-final-score').textContent = `${pqScore}/${total}`;
-  document.getElementById('pq-final-pct').textContent = `${Math.round(pqScore/total*100)}% correct`;
-
-  const byCat = {};
-  pqAnswers.forEach(a=>{
-    if(!byCat[a.region]) byCat[a.region] = {correct:0, total:0};
-    byCat[a.region].total++;
-    if(a.wasCorrect) byCat[a.region].correct++;
-  });
-  const catWrap = document.getElementById('pq-cat-breakdown');
-  catWrap.innerHTML = '';
-  Object.keys(byCat).forEach(catId=>{
-    const {correct, total} = byCat[catId];
-    const pct = Math.round(correct/total*100);
-    const row = document.createElement('div');
-    row.className = 'pq-cat-row';
-    row.innerHTML = `<span class="pq-cat-name">${PQ_REGION_LABEL[catId]}</span>
-      <span class="pq-cat-bar-track"><span class="pq-cat-bar-fill" style="width:${pct}%"></span></span>
-      <span class="pq-cat-score">${correct}/${total}</span>`;
-    catWrap.appendChild(row);
-  });
-
-  const missed = pqAnswers.filter(a=>!a.wasCorrect);
-  const missCard = document.getElementById('pq-miss-card');
-  const missList = document.getElementById('pq-miss-list');
-  missList.innerHTML = '';
-  if(missed.length===0){
-    missCard.classList.add('pq-hidden');
-  } else {
-    missCard.classList.remove('pq-hidden');
-    missed.forEach(m=>{
-      const div = document.createElement('div');
-      div.className = 'pq-miss-item';
-      div.innerHTML = `
-        <div class="pq-miss-q">${m.q}</div>
-        <div class="pq-miss-you">Your answer: ${m.chosen}</div>
-        <div class="pq-miss-correct">Correct answer: ${m.correctText}</div>
-        <div class="pq-miss-exp">${m.exp}</div>`;
-      missList.appendChild(div);
-    });
-  }
-
-  document.getElementById('pq-retry-missed-btn').classList.toggle('pq-hidden', missed.length===0);
-}
-
-document.getElementById('pq-retry-missed-btn').addEventListener('click', ()=>{
-  const missedQs = pqAnswers.filter(a=>!a.wasCorrect).map(a=>
-    PQ_QUESTIONS.find(q=>q.q===a.q)
-  );
-  pqQuestions = pqShuffle(missedQs);
-  pqBegin();
-});
-
-document.getElementById('pq-restart-btn').addEventListener('click', ()=>{
-  document.getElementById('pq-results-screen').classList.add('pq-hidden');
-  document.getElementById('pq-setup-screen').classList.remove('pq-hidden');
-});
 </script>
 
 </body>
